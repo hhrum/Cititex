@@ -21,7 +21,15 @@ a {
   font: $f_title;
 }
 
-.show-all {
+.section-subtitle {
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.section-button {
   display: block;
   color: $c_black;
   padding: 24px 64px;
