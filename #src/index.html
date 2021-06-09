@@ -6,27 +6,93 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cititex</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 @@include('templates/header.html')
 
-<section>
-    <div class="splide">
-        <div class="splide__track">
-            <ul class="splide__list">
-                <li class="splide__slide">Slide 01</li>
-                <li class="splide__slide">Slide 02</li>
-                <li class="splide__slide">Slide 03</li>
-            </ul>
-        </div>
-    </div>
-</section>
+<main class="main">
 
-<footer>
-    Footer
-</footer>
+    <section class="main-slider">
+
+        <div id="main-slider" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="main-slider-item">
+                            <div class="main-slider-item__bg">
+                                <img src="img/main_slider.png">
+                            </div>
+
+                            <div class="main-slider-item__content">
+                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                                <p class="main-slider-item__subtitle">
+                                    Первая доставка покупок
+                                    <br>
+                                    в подарок до 1 марта
+                                </p>
+                                <a href="#" class="main-slider-item__link">Купить</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="main-slider-item">
+                            <div class="main-slider-item__bg">
+                                <img src="img/main_slider.png">
+                            </div>
+
+                            <div class="main-slider-item__content">
+                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                                <p class="main-slider-item__subtitle">
+                                    Первая доставка покупок
+                                    <br>
+                                    в подарок до 1 марта
+                                </p>
+                                <a href="#" class="main-slider-item__link">Купить</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-slider__item">
+
+
+
+        </div>
+
+        Блок с главным слайдером
+    </section>
+
+    <section class="new-items">
+        Блок с новинками
+    </section>
+
+    <section class="sale">
+        Блок с распродажей
+    </section>
+
+    <section class="about">
+        Блок о компании
+    </section>
+
+    <section class="catalog-categories">
+        Блок с категориями каталога
+    </section>
+
+    <section class="instagram">
+        Блок наш инстаграм
+    </section>
+
+    <section class="popular">
+        Блок популярное
+    </section>
+
+</main>
 
 <script src="js/script.js"></script>
 </body>

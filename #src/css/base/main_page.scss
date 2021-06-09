@@ -1,0 +1,69 @@
+@import "../utilities/variables";
+
+// Стили главной страницы
+
+.main-slider-item {
+  height: 920px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    padding-left: 60px;
+    z-index: 0;
+
+    > * {
+      margin: 24px 0;
+    }
+  }
+
+  &__title {
+    color: $c_white;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  &__subtitle {
+    color: $c_white;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  &__link {
+    display: block;
+    color: $c_black;
+    background-color: $c_white;
+    padding: 24px 96px;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+}

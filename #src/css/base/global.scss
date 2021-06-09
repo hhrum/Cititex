@@ -1,0 +1,30 @@
+
+// Глобальные стили
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.splide__my-custom-pagination {
+  bottom: 64px;
+
+  > li {
+    margin: 0 14px;
+  }
+}
+
+.splide__my-custom-page {
+  width: 64px;
+  height: 4px;
+  border-radius: 0;
+
+  &.is-active {
+    transform: scale(1);
+  }
+}
