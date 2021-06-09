@@ -3,6 +3,9 @@ const products = require('./data/products');
 const {productMaker} = require('./utilities/makers');
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Главный слайдер
+
   new Splide('#main-slider', {
     arrows: false,
     classes: {
@@ -10,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
       page: 'splide__pagination__page splide__my-custom-page', // each button
     }
   }).mount();
+
+  // Новинки
 
   new Splide('#new-items-slider', {
     width: "calc(100vw - 34px)",
@@ -20,6 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
       page: 'splide__pagination__page splide__my-custom-page', // each button
     }
   }).mount();
+
+  // Распродажа
+
+  new Splide('#sale-slider', {
+    width: 1008,
+    cover: true,
+    arrows: false,
+    classes: {
+      pagination: 'splide__pagination splide__my-custom-pagination', // container
+      page: 'splide__pagination__page splide__my-custom-page', // each button
+    }
+  }).mount();
+
+  const saleImage = document.getElementById('sale-image');
+  const saleContent = document.getElementById('sale-content');
+
+  saleImage.style.height = saleContent.offsetHeight + 'px';
+  saleImage.style.width = window.screen.width - saleContent.offsetWidth + 'px';
 });
 
 function showProductsAtSlider(products, slider) {

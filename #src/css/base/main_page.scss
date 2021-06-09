@@ -96,4 +96,59 @@
       border: 1px solid $c_black;
     }
   }
+
+  .show-all {
+    margin-top: 48px;
+  }
+}
+
+
+// Распродажа
+
+.sale {
+  position: relative;
+
+  &__image {
+    width: calc(100% - 1008px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 96px 56px;
+  }
+
+  &__slider {
+    margin: 64px 0;
+  }
+
+  &__bg-color {
+    background-color: $c_bg_secondary;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    bottom: 0;
+    left: -128px;
+    z-index: -1;
+  }
+
+  &__show-all-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .show-all {
+    color: $c_white;
+    background-color: $c_black;
+  }
 }

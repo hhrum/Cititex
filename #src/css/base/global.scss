@@ -16,6 +16,24 @@ a {
   text-decoration: none;
 }
 
+.section-title {
+  color: $c_black;
+  font: $f_title;
+}
+
+.show-all {
+  display: block;
+  color: $c_black;
+  padding: 24px 64px;
+  border: 1px solid $c_black;
+
+  font-family: Montserrat, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
 .splide__my-custom-pagination {
   bottom: 64px;
 
@@ -76,9 +94,4 @@ a {
       margin: 0 12px;
     }
   }
-}
-
-section > .title {
-  color: $c_black;
-  font: $f_title;
 }

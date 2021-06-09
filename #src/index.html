@@ -61,7 +61,7 @@
     </section>
 
     <section class="new-items">
-        <div class="title new-items__title">
+        <div class="section-title new-items__title">
             Новинки от Cititex
         </div>
 
@@ -93,10 +93,44 @@
             </div>
         </div>
 
+        <a href="#" class="show-all">
+            Показать всё
+        </a>
+
     </section>
 
     <section class="sale">
-        Блок с распродажей
+
+        <div id="sale-image" class="sale__image">
+            <img  src="img/sale_image.png">
+        </div>
+
+        <div id="sale-content" class="sale__content">
+            <div class="sale__bg-color"></div>
+            <div class="section-title sale__title">Распродажа</div>
+
+            <div id="sale-slider" class="splide sale__slider product-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            @@include("templates/product.html")
+                            @@include("templates/product.html")
+                            @@include("templates/product.html")
+                        </li>
+                        <li class="splide__slide">
+                            @@include("templates/product.html")
+                            @@include("templates/product.html")
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sale__show-all-wrapper">
+                <a href="#" class="show-all sale__show-all">
+                    Показать всё
+                </a>
+            </div>
+        </div>
     </section>
 
     <section class="about">
