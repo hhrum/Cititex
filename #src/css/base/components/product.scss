@@ -1,0 +1,108 @@
+@import "../../utilities/variables";
+
+// Товар
+
+.product {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    position: relative;
+    width: 320px;
+    height: 320px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__like {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
+  &__state-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 16px 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__state {
+    background-color: $c_gray__light;
+    text-align: right;
+    margin: 8px 0;
+    padding: 4px 8px 4px 28px;
+
+    color: $c_accent;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  &__footer {
+
+  }
+
+  &__name {
+    margin: 24px 0 16px;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  &__price {
+    display: flex;
+    margin: 16px 0;
+  }
+
+  &__old-price {
+    margin-right: 12px;
+
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    text-decoration: line-through;
+  }
+
+  &__current-price {
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  &__cart {
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+
+    cursor: pointer;
+  }
+}

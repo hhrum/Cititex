@@ -58,18 +58,41 @@
                 </ul>
             </div>
         </div>
-
-        <div class="main-slider__item">
-
-
-
-        </div>
-
-        Блок с главным слайдером
     </section>
 
     <section class="new-items">
-        Блок с новинками
+        <div class="title new-items__title">
+            Новинки от Cititex
+        </div>
+
+        <div class="new-items__categories">
+            <div class="new-items__category">Подушки</div>
+            <div class="new-items__category">Постельное белье</div>
+            <div class="new-items__category">Полотенца</div>
+            <div class="new-items__category is-active">Для кухни</div>
+            <div class="new-items__category">Халаты</div>
+            <div class="new-items__category">Праздники</div>
+        </div>
+
+        <div id="new-items-slider" class="splide product-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 
     <section class="sale">
