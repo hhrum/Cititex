@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 .section-title {
   color: $c_black;
   font: $f_title;
@@ -32,6 +36,7 @@ a {
 .section-button {
   display: block;
   color: $c_black;
+  background-color: $c_white;
   padding: 24px 64px;
   border: 1px solid $c_black;
 
@@ -40,6 +45,26 @@ a {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.2rem;
+  transition-duration: $transition_time;
+
+  &:hover {
+    color: $c_white;
+    background-color: $c_black;
+  }
+
+  &.no-border {
+    border: none;
+  }
+
+  &--black {
+    color: $c_white;
+    background-color: $c_black;
+
+    &:hover {
+      color: $c_black;
+      background-color: $c_white;
+    }
+  }
 }
 
 .splide__my-custom-pagination {

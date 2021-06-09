@@ -16,7 +16,7 @@
 
 <main class="main">
 
-    <section class="main-slider">
+    <section class="main-slider no-padding">
 
         <div id="main-slider" class="splide">
             <div class="splide__track">
@@ -34,7 +34,7 @@
                                     <br>
                                     в подарок до 1 марта
                                 </p>
-                                <a href="#" class="main-slider-item__link">Купить</a>
+                                <a href="#" class=" section-button no-border">Купить</a>
                             </div>
                         </div>
                     </li>
@@ -51,7 +51,7 @@
                                     <br>
                                     в подарок до 1 марта
                                 </p>
-                                <a href="#" class="main-slider-item__link">Купить</a>
+                                <a href="#" class=" section-button no-border">Купить</a>
                             </div>
                         </div>
                     </li>
@@ -126,7 +126,7 @@
             </div>
 
             <div class="sale__button-wrapper">
-                <a href="#" class="section-button sale__section-button">
+                <a href="#" class="section-button section-button--black">
                     Показать всё
                 </a>
             </div>
@@ -205,15 +205,80 @@
     </section>
 
     <section class="catalog-categories">
-        Блок с категориями каталога
+        <div class="section-title">Каталог</div>
+        <div class="catalog-categories__grid">
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
+            </div>
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
+            </div>
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
+            </div>
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
+            </div>
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
+            </div>
+        </div>
     </section>
 
-    <section class="instagram">
-        Блок наш инстаграм
+    <section class="instagram all-padding">
+        <div class="instagram__content">
+            <div class="instagram__title">
+                Наш инстаграм
+            </div>
+            <div class="instagram__subtitle">
+                Подпишись, чтобы быть <br> в курсе
+            </div>
+            <a href="#" class="section-button">
+                Подписаться
+            </a>
+        </div>
+        <div class="instagram__images">
+            <div class="instagram__image">
+                <img src="img/instagram_1.png">
+            </div>
+            <div class="instagram__image">
+                <img src="img/instagram_1.png">
+            </div>
+            <div class="instagram__image">
+                <img src="img/instagram_1.png">
+            </div>
+        </div>
     </section>
 
     <section class="popular">
-        Блок популярное
+
+        <div class="section-title new-items__title">
+            Популярное от Cititex
+        </div>
+
+        <div id="popular-slider" class="splide product-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="section-button">
+            Показать всё
+        </a>
+
     </section>
 
 </main>

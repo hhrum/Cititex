@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }).mount();
 
+
   // Новинки
 
   new Splide('#new-items-slider', {
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
       page: 'splide__pagination__page splide__my-custom-page', // each button
     }
   }).mount();
+
 
   // Распродажа
 
@@ -42,7 +44,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const saleContent = document.getElementById('sale-content');
 
   saleImage.style.height = saleContent.offsetHeight + 'px';
-  saleImage.style.width = window.screen.width - saleContent.offsetWidth + 'px';
+  // 56 отступы TODO: Поправил это говнище
+  saleImage.style.width = window.screen.width - saleContent.offsetWidth - 56 + 'px';
+
+
+  // Популярное
+
+  new Splide('#popular-slider', {
+    width: "calc(100vw - 34px)",
+    cover: true,
+    arrows: false,
+    classes: {
+      pagination: 'splide__pagination splide__my-custom-pagination', // container
+      page: 'splide__pagination__page splide__my-custom-page', // each button
+    }
+  }).mount();
 });
 
 function showProductsAtSlider(products, slider) {
