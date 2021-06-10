@@ -83,14 +83,17 @@ const css = () => {
 }
 
 const js = () => {
-  return browserify(path.source.js)
+  browserify(path.source.js)
     .bundle()
     .pipe(source('script.js'))
     .pipe(dest(path.build.js))
-    // .pipe(rename({
-    //   extname: '.min.js'
-    // }))
-    // .pipe(uglify())
+    .pipe(bs.stream())
+
+  return browserify(path.source.js)
+    .transform('uglifyify', {global: true})
+    .bundle()
+    .pipe(source('script.min.js'))
+    .pipe(dest(path.build.js))
     .pipe(bs.stream())
 }
 
@@ -129,8 +132,6 @@ const includeFonts = (done) => {
     'Normal': 'normal',
     'Italic': 'italic',
   }
-
-  let file_content = fs.readFileSync(fontsStylePath);
 
   fs.writeFile(fontsStylePath, '', cb);
 

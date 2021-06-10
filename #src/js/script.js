@@ -99,11 +99,3 @@ function showProductsAtSlider(products, slider) {
   })
 
 }
-
-// Artem
-
-const headerSearch = document.querySelector('.header__search')
-
-headerSearch.onclick = () => {
-  headerSearch.classList.toggle('active')
-}
