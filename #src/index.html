@@ -8,6 +8,7 @@
     <title>Cititex</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -100,35 +101,38 @@
     </section>
 
     <section class="sale">
-
-        <div id="sale-image" class="sale__image">
-            <img src="img/sale_image.png">
+        <div data-aos="fade-right">
+            <div id="sale-image" class="sale__image">
+                <img src="img/sale_image.png">
+            </div>
         </div>
 
         <div id="sale-content" class="sale__content">
             <div class="sale__bg-color"></div>
             <div class="section-title sale__title">Распродажа</div>
+            <div data-aos="fade-left">
 
-            <div id="sale-slider" class="splide sale__slider product-slider">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                        </li>
-                        <li class="splide__slide">
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                        </li>
-                    </ul>
+                <div id="sale-slider" class="splide sale__slider product-slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                @@include("templates/product.html")
+                                @@include("templates/product.html")
+                                @@include("templates/product.html")
+                            </li>
+                            <li class="splide__slide">
+                                @@include("templates/product.html")
+                                @@include("templates/product.html")
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="sale__button-wrapper">
-                <a href="#" class="section-button section-button--black">
-                    Показать всё
-                </a>
+                <div class="sale__button-wrapper">
+                    <a href="#" class="section-button section-button--black">
+                        Показать всё
+                    </a>
+                </div>
             </div>
         </div>
     </section>

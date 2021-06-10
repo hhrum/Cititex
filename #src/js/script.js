@@ -1,6 +1,18 @@
 require('@splidejs/splide');
+const AOS = require('aos');
 const products = require('./data/products');
 const {productMaker} = require('./utilities/makers');
+
+let dropDownMenuIsActive = false;
+const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
+const dropDownMenu = document.getElementById('drop-down-menu');
+
+dropDownMenuToggle.onclick = () => {
+  dropDownMenuIsActive = !dropDownMenuIsActive;
+
+  dropDownMenu.classList.toggle('is-active');
+  dropDownMenuToggle.classList.toggle('is-active');
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -59,6 +71,11 @@ document.addEventListener('DOMContentLoaded', function () {
       page: 'splide__pagination__page splide__my-custom-page', // each button
     }
   }).mount();
+
+  AOS.init({
+    // offset: 500,
+    duration: 1000
+  });
 });
 
 function showProductsAtSlider(products, slider) {

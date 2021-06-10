@@ -3,9 +3,7 @@
 // Шапка
 
 header {
-  background-color: $c_white;
   height: 120px;
-  padding: 0 56px;
   position: fixed;
   top: 0;
   right: 0;
@@ -14,10 +12,14 @@ header {
   z-index: 2;
 
   .header {
+    background-color: $c_white;
+    position: relative;
     height: 100%;
+    padding: 0 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 
     &__left,
     &__right {
@@ -34,15 +36,17 @@ header {
       justify-content: flex-end;
     }
 
+    // Стили для кноки, открывающей меню
     &__menu-open {
       width: 40px;
       height: 36px;
       position: relative;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid $c_black;
       box-sizing: border-box;
-      transition: all .5s;
+      transition: $transition_time;
       cursor: pointer;
       overflow: hidden;
+
 
       &:before {
         position: absolute;
@@ -52,8 +56,8 @@ header {
         content: "";
         display: block;
         height: 2px;
-        background: black;
-        transition: all .5s;
+        background: $c_black;
+        transition: $transition_time;
       }
 
       &:after {
@@ -64,11 +68,11 @@ header {
         content: "";
         display: block;
         height: 2px;
-        background: black;
-        transition: transform .5s, width 2s;
+        background: $c_black;
+        transition: $transition_time;
       }
 
-      &:hover, &:active, &.active {
+      &.is-active {
         border: 0;
 
         &:before {
@@ -94,6 +98,95 @@ header {
           left: 0;
           margin-left: 0;
         }
+      }
+
+      &:hover {
+        border-color: $c_accent;
+
+        &:before,
+        &:after {
+          background: $c_accent;
+        }
+      }
+    }
+
+
+  }
+
+  .drop-down-menu {
+    background-color: $c_white;
+    padding: 0 56px 56px;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 0;
+
+    transform: translateY(-100%);
+
+    display: flex;
+    justify-content: space-between;
+
+    transition: $transition_time;
+
+    &.is-active {
+      transform: translateY(0);
+    }
+
+    &__content {
+      flex: 1 1;
+      display: flex;
+    }
+
+    &__nav {
+      margin-right: 56px;
+
+      .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+        font-family: Montserrat, serif;
+        font-style: normal;
+
+        a {
+          color: $c_black;
+          display: block;
+
+          &:hover {
+            color: $c_gray;
+          }
+        }
+
+        &__title {
+          margin-bottom: 48px;
+          font-weight: 600;
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+
+        &__content {
+          margin: -8px 0;
+        }
+
+        &__item {
+          margin: 8px 0;
+          font-size: 0.9rem;
+          line-height: 1rem;
+
+          &--bold {
+            margin: 12px 0;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1rem;
+
+            &:hover {
+              color: $c_accent !important;
+            }
+          }
+        }
+
       }
     }
   }
