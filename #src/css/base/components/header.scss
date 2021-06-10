@@ -1,0 +1,100 @@
+@import "../../utilities/variables";
+
+// Шапка
+
+header {
+  background-color: $c_white;
+  height: 120px;
+  padding: 0 56px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  z-index: 2;
+
+  .header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left,
+    &__right {
+      flex: 1 1;
+      display: flex;
+      align-items: center;
+    }
+
+    &__left {
+
+    }
+
+    &__right {
+      justify-content: flex-end;
+    }
+
+    &__menu-open {
+      width: 40px;
+      height: 36px;
+      position: relative;
+      border-bottom: 2px solid black;
+      box-sizing: border-box;
+      transition: all .5s;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        background: black;
+        transition: all .5s;
+      }
+
+      &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        content: "";
+        display: block;
+        height: 2px;
+        background: black;
+        transition: transform .5s, width 2s;
+      }
+
+      &:hover, &:active, &.active {
+        border: 0;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 100%;
+          transform: rotate(45deg);
+          background: black;
+          top: 100%;
+          margin-top: -55%;
+          left: 0;
+          margin-left: -0;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          transform: rotate(-45deg);
+          background: black;
+          top: 100%;
+          margin-top: -55%;
+          left: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
