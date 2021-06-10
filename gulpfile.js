@@ -50,9 +50,11 @@ const {src, dest, series, parallel} = require('gulp'),
   // js
   browserify = require('browserify'),
   source = require('vinyl-source-stream'),
-  uglify = require('gulp-uglify'),
   // html
   fileInclude = require('gulp-file-include'),
+  //img
+  imagemin = require('gulp-imagemin'),
+  pngquant = require('imagemin-pngquant'),
   // fonts
   ttf2woff = require('gulp-ttf2woff'),
   ttf2woff2 = require('gulp-ttf2woff2');
@@ -100,6 +102,12 @@ const js = () => {
 const img = () => {
   return src(path.source.img)
     .pipe(dest(path.build.img))
+    .pipe(imagemin({ //Сожмем их
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()],
+      interlaced: true
+    }))
     .pipe(bs.stream());
 }
 
