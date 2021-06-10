@@ -1,7 +1,7 @@
 require('@splidejs/splide');
 const AOS = require('aos');
 const products = require('./data/products');
-const {productMaker} = require('./utilities/makers');
+const { productMaker } = require('./utilities/makers');
 
 let dropDownMenuIsActive = false;
 const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
@@ -98,4 +98,12 @@ function showProductsAtSlider(products, slider) {
     list.appendChild(li);
   })
 
+}
+
+// Artem
+
+const headerSearch = document.querySelector('.header__search')
+
+headerSearch.onclick = () => {
+  headerSearch.classList.toggle('active')
 }
