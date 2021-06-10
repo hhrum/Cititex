@@ -1,6 +1,6 @@
 require('@splidejs/splide');
 const products = require('./data/products');
-const {productMaker} = require('./utilities/makers');
+const { productMaker } = require('./utilities/makers');
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -81,4 +81,12 @@ function showProductsAtSlider(products, slider) {
     list.appendChild(li);
   })
 
+}
+
+// Artem
+
+const headerSearch = document.querySelector('.header__search')
+
+headerSearch.onclick = () => {
+  headerSearch.classList.toggle('active')
 }
