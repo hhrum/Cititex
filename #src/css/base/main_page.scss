@@ -332,7 +332,12 @@
   }
 
   &__image {
+    width: 320px;
     margin: 0 56px;
+
+    img {
+      @include imageFit;
+    }
   }
 }
 

@@ -244,6 +244,12 @@ header {
       display: flex;
     }
 
+    &__image {
+      img {
+        @include imageFit(contain);
+      }
+    }
+
     &__nav {
       margin-right: 56px;
 

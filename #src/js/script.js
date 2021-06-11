@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const saleContent = document.getElementById('sale-content');
 
   saleImage.style.height = saleContent.offsetHeight + 'px';
-  // 56 отступы TODO: Поправил это говнище
+  // 56 отступы TODO: Поправь это говнище
   saleImage.style.width = window.screen.width - saleContent.offsetWidth - 56 + 'px';
 
 

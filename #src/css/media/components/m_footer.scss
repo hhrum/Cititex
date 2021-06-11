@@ -1,0 +1,34 @@
+
+// md
+@media screen and (max-width: 1200px) {
+  .subscribe-news {
+    .section-title {
+      margin-bottom: 60px;
+    }
+
+    &__form {
+      max-width: 900px;
+    }
+
+    &__email {
+      width: 100%;
+      flex: 1 1;
+    }
+  }
+
+  .footer {
+    &__content {
+
+    }
+  }
+}
+
+// sm
+@media screen and (max-width: 992px) {
+
+}
+
+// xs
+@media screen and (max-width: 768px) {
+
+}

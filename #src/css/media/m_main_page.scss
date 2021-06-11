@@ -1,0 +1,79 @@
+// md
+@media screen and (max-width: 1200px) {
+
+  .about {
+    &__advantage {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content {
+      > *:last-child {
+        flex: 0 1;
+      }
+    }
+
+    &__info {
+      margin-right: 0 -18px;
+    }
+
+    &__advantages {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__advantage {
+      margin: 0 18px 36px;
+    }
+
+    &__advantage-image {
+      margin-right: 0;
+      margin-bottom: 36px;
+    }
+
+    &__advantage-text {
+      text-align: justify;
+    }
+
+    &__images {
+      display: none;
+    }
+  }
+
+  .instagram {
+
+    &__content {
+      flex: 1 1;
+    }
+
+    &__images {
+      margin: 0 -16px;
+      flex: 1 1;
+      display: grid;
+      grid-template-areas:
+              "big big"
+              ". .";
+    }
+
+    &__image {
+      width: 200px;
+      margin: 16px;
+
+      &:first-child {
+        width: auto;
+        height: 200px;
+        grid-column: big;
+      }
+    }
+  }
+}
+
+// sm
+@media screen and (max-width: 992px) {
+
+}
+
+// xs
+@media screen and (max-width: 768px) {
+
+}
