@@ -1,6 +1,3 @@
-@import "node_modules/@splidejs/splide/dist/css/splide.min";
-@import "node_modules/aos/dist/aos";
-
 @import "utilities/mixins";
 @import "utilities/variables";
 
@@ -19,5 +16,7 @@
 // media
 @import "media/components/m_header";
 @import "media/components/m_footer";
+
+
 @import "media/m_globals";
 @import "media/m_main_page";

@@ -10,73 +10,118 @@ const dropDownMenu = document.getElementById('drop-down-menu');
 dropDownMenuToggle.onclick = () => {
   dropDownMenuIsActive = !dropDownMenuIsActive;
 
-  dropDownMenu.classList.toggle('is-active');
-  dropDownMenuToggle.classList.toggle('is-active');
+  toggleDropDownMenu();
 }
+
+function toggleDropDownMenu() {
+  dropDownMenu.classList.toggle('is-active', dropDownMenuIsActive);
+  dropDownMenuToggle.classList.toggle('is-active', dropDownMenuIsActive);
+}
+
+window.addEventListener('scroll', function () {
+  if (dropDownMenuIsActive) {
+    dropDownMenuIsActive = false;
+    toggleDropDownMenu();
+  }
+})
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Главный слайдер
-
-  new Splide('#main-slider', {
-    arrows: false,
-    classes: {
-      pagination: 'splide__pagination splide__my-custom-pagination', // container
-      page: 'splide__pagination__page splide__my-custom-page', // each button
-    }
-  }).mount();
-
-
-  // Новинки
-
-  new Splide('#new-items-slider', {
-    width: "calc(100vw - 34px)",
-    cover: true,
-    arrows: false,
-    classes: {
-      pagination: 'splide__pagination splide__my-custom-pagination', // container
-      page: 'splide__pagination__page splide__my-custom-page', // each button
-    }
-  }).mount();
-
-
-  // Распродажа
-
-  new Splide('#sale-slider', {
-    width: 1100,
-    cover: true,
-    arrows: false,
-    classes: {
-      pagination: 'splide__pagination splide__my-custom-pagination', // container
-      page: 'splide__pagination__page splide__my-custom-page', // each button
-    }
-  }).mount();
-
-  const saleImage = document.getElementById('sale-image');
-  const saleContent = document.getElementById('sale-content');
-
-  saleImage.style.height = saleContent.offsetHeight + 'px';
-  // 56 отступы TODO: Поправь это говнище
-  saleImage.style.width = window.screen.width - saleContent.offsetWidth - 56 + 'px';
-
-
-  // Популярное
-
-  new Splide('#popular-slider', {
-    width: "calc(100vw - 34px)",
-    cover: true,
-    arrows: false,
-    classes: {
-      pagination: 'splide__pagination splide__my-custom-pagination', // container
-      page: 'splide__pagination__page splide__my-custom-page', // each button
-    }
-  }).mount();
-
   AOS.init({
-    // offset: 500,
+    offset: -500,
     duration: 1000
   });
+  initSliders();
 });
+
+function initSliders() {
+  //product-swiper product-swiper--slim  main-slider
+  const mainSwiper = new Swiper('.main-slider', {
+    direction: 'horizontal',
+    speed: 1000,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  const productSwiper = new Swiper('.product-swiper--big', {
+    direction: 'horizontal',
+    speed: 1000,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    breakpoints: {
+      // width >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        slidesPerGroup: 1,
+      },
+      // width is >= 640px
+      660: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        slidesPerGroup: 2,
+      },
+      960: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        slidesPerGroup: 3,
+      },
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+        slidesPerGroup: 4,
+      },
+      1600: {
+        slidesPerView: 5,
+        spaceBetween: 32,
+        slidesPerGroup: 5,
+      }
+    },
+  });
+
+  const productSwiperSlim = new Swiper('.product-swiper--slim', {
+    direction: 'horizontal',
+    speed: 1000,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    breakpoints: {
+      // width >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        slidesPerGroup: 1,
+      },
+      // width is >= 640px
+      660: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        slidesPerGroup: 2,
+      },
+      // width is >= 640px
+      960: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+        slidesPerGroup: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        slidesPerGroup: 3,
+      },
+    },
+  });
+}
 
 function showProductsAtSlider(products, slider) {
   const productsForShow = [...products];

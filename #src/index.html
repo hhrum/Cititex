@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cititex</title>
 
-    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">-->
-    <!--    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    @@include('templates/styles.html')
 </head>
 
 <body>
@@ -20,46 +20,44 @@
 <main class="main">
 
     <section class="main-slider no-padding">
-
-        <div id="main-slider" class="splide">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <div class="main-slider-item">
-                            <div class="main-slider-item__bg">
-                                <img src="img/main_slider.png">
-                            </div>
-
-                            <div class="main-slider-item__content">
-                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
-                                <p class="main-slider-item__subtitle">
-                                    Первая доставка покупок
-                                    <br>
-                                    в подарок до 1 марта
-                                </p>
-                                <a href="#" class=" section-button no-border">Купить</a>
-                            </div>
+        <div class="swiper-container main-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="main-slider-item">
+                        <div class="main-slider-item__bg">
+                            <img src="img/main_slider.png">
                         </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div class="main-slider-item">
-                            <div class="main-slider-item__bg">
-                                <img src="img/main_slider.png">
-                            </div>
 
-                            <div class="main-slider-item__content">
-                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
-                                <p class="main-slider-item__subtitle">
-                                    Первая доставка покупок
-                                    <br>
-                                    в подарок до 1 марта
-                                </p>
-                                <a href="#" class=" section-button no-border">Купить</a>
-                            </div>
+                        <div class="main-slider-item__content">
+                            <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                            <p class="main-slider-item__subtitle">
+                                Первая доставка покупок
+                                <br>
+                                в подарок до 1 марта
+                            </p>
+                            <a href="#" class=" section-button no-border">Купить</a>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="main-slider-item">
+                        <div class="main-slider-item__bg">
+                            <img src="img/main_slider.png">
+                        </div>
+
+                        <div class="main-slider-item__content">
+                            <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                            <p class="main-slider-item__subtitle">
+                                Первая доставка покупок
+                                <br>
+                                в подарок до 1 марта
+                            </p>
+                            <a href="#" class=" section-button no-border">Купить</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -77,23 +75,50 @@
             <div class="new-items__category">Праздники</div>
         </div>
 
-        <div id="new-items-slider" class="splide product-slider">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                    </li>
-                    <li class="splide__slide">
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                    </li>
-                </ul>
+        <div class="swiper-container product-swiper product-swiper--big">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 1})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 2})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 3})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 4})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 5})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 6})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 7})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 8})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 9})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 10})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 11})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 12})
+                </div>
+                ...
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         </div>
 
         <a href="#" class="section-button">
@@ -102,7 +127,7 @@
 
     </section>
 
-    <section class="sale">
+    <section class="sale no-padding">
         <div data-aos="fade-right">
             <div id="sale-image" class="sale__image">
                 <img src="img/sale_image.png">
@@ -111,28 +136,39 @@
         <div id="sale-content" class="sale__content">
             <div class="sale__bg-color"></div>
             <div class="section-title sale__title">Распродажа</div>
-            <div data-aos="fade-left">
-                <div id="sale-slider" class="splide sale__slider product-slider">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                @@include("templates/product.html")
-                                @@include("templates/product.html")
-                                @@include("templates/product.html")
-                            </li>
-                            <li class="splide__slide">
-                                @@include("templates/product.html")
-                                @@include("templates/product.html")
-                            </li>
-                        </ul>
+            <!--            <div data-aos="fade-left">-->
+            <div class="swiper-container sale__slider product-swiper product-swiper--slim">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 1})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 2})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 3})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 4})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 5})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 6})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 7})
                     </div>
                 </div>
-                <div class="sale__button-wrapper">
-                    <a href="#" class="section-button section-button--black">
-                        Показать всё
-                    </a>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
+            <div class="sale__button-wrapper">
+                <a href="#" class="section-button section-button--black">
+                    Показать всё
+                </a>
+            </div>
+            <!--            </div>-->
         </div>
     </section>
 
@@ -217,10 +253,10 @@
                                 отправляем Ваши заказы Почтой России.
                             </div>
                         </div>
+                    </div>
 
-                        <div class="sale__button-wrapper">
-                            <a href="about.html" class="section-button">Подробнее</a>
-                        </div>
+                    <div class="sale__button-wrapper">
+                        <a href="about.html" class="section-button">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -286,23 +322,50 @@
             Популярное от Cititex
         </div>
 
-        <div id="popular-slider" class="splide product-slider">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                    </li>
-                    <li class="splide__slide">
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                        @@include("templates/product.html")
-                    </li>
-                </ul>
+        <div class="swiper-container product-swiper product-swiper--big">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 1})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 2})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 3})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 4})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 5})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 6})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 7})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 8})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 9})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 10})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 11})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 12})
+                </div>
+                ...
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
         </div>
 
         <a href="#" class="section-button">
@@ -314,8 +377,7 @@
 </main>
 
 @@include('templates/footer.html')
-
-<script src="js/script.min.js"></script>
+@@include('templates/scripts.html')
 </body>
 
 </html>

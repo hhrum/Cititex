@@ -1,3 +1,5 @@
+@import "../utilities/mixins";
+
 // md
 @media screen and (max-width: 1200px) {
 
@@ -43,7 +45,13 @@
 
 // sm
 @media screen and (max-width: 992px) {
-
+  .catalog-categories {
+    .catalog-category {
+      &__title {
+        @include fontRubik(400, 2rem, 2rem);
+      }
+    }
+  }
 }
 
 // xs

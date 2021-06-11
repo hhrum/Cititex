@@ -4,6 +4,20 @@
 // Стили главной страницы
 
 // Главный Слайдер
+.main-slider {
+  .swiper-pagination {
+    bottom: 64px;
+
+    &-bullet {
+      background-color: $c_gray__light;
+
+      &-active {
+        background-color: $c_white;
+      }
+    }
+  }
+}
+
 .main-slider-item {
   height: 920px;
   padding-top: 120px;
@@ -50,7 +64,6 @@
   }
 }
 
-
 // Новинки
 
 .new-items {
@@ -92,7 +105,6 @@
   }
 }
 
-
 // Распродажа
 
 .sale {
@@ -100,7 +112,8 @@
   margin-top: $m_section_top;
 
   &__image {
-    width: calc(100% - 1008px);
+    width: 40vw;
+    min-width: calc(100vw - 1160px);
 
     img {
       @include imageFit;
@@ -109,6 +122,8 @@
 
   &__content {
     position: absolute;
+    width: 60vw;
+    max-width: 1160px;
     top: 0;
     right: 0;
     display: flex;
@@ -118,7 +133,8 @@
   }
 
   &__slider {
-    margin: 64px 0;
+    width: 100%;
+    margin: 36px 0;
   }
 
   &__bg-color {
@@ -135,12 +151,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  .product-slider {
-    .splide__slide {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 }
 
@@ -308,7 +318,7 @@
 
   margin: $m_section_top 0;
 
-  .product-slider {
+  .product-swiper {
     margin-top: 80px;
   }
 
