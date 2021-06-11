@@ -13,14 +13,15 @@ html {
 }
 
 section {
-  padding: 0 56px;
+  min-width: 100vw;
+  padding: 0 $p_section;
 
   &.no-padding {
     padding: 0;
   }
 
   &.all-padding {
-    padding: 56px;
+    padding: $p_section;
   }
 }
 
@@ -40,15 +41,11 @@ img {
 
 .section-title {
   color: $c_black;
-  font: $f_title;
+  @include fontRubik(500, 2rem, 2rem);
 }
 
 .section-subtitle {
-  font-family: Montserrat, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  @include fontMontserrat(400, 1.5rem, 1.5rem);
 }
 
 .section-button {
@@ -59,11 +56,7 @@ img {
   border: 1px solid $c_black;
   border-radius: 0;
 
-  font-family: Montserrat, serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  @include fontMontserrat(500, 1.2rem, 1.2rem);
   transition-duration: $transition_time;
   cursor: pointer;
 
@@ -127,6 +120,7 @@ img {
 
 .product-slider {
   padding-bottom: 80px;
+  align-self: stretch;
 
   .splide__my-custom-pagination {
     bottom: 0;
@@ -141,12 +135,14 @@ img {
   }
 
   .splide__slide {
-    display: flex;
-    justify-content: center;
-    padding: 0 -12px;
+    display: grid;
+    grid-template-columns: repeat(5, calc(calc(100vw - 56px - 56px) / 5));
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas: ". . . . .";
 
     > * {
-      margin: 0 12px;
+      justify-self: center;
     }
   }
 }

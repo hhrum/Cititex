@@ -44,9 +44,8 @@
 .footer {
   background-color: $c_bg_secondary;
 
-  padding: 48px 56px 32px;
+  padding: 48px $p_section 32px;
   font-family: Montserrat, serif;
-  font-style: normal;
 
   &__header {
 
@@ -106,16 +105,12 @@
   }
 
   &__accent-text {
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    @include fontMontserrat(700, 1.2rem, 1.2rem);
   }
 
   &__secondary-text {
     color: $c_gray;
-    font-weight: 500;
-    font-size: 0.8rem;
-    line-height: 1rem;
+    @include fontMontserrat(500, 0.8rem, 1rem);
   }
 
 }

@@ -166,7 +166,7 @@ const includeFonts = (done) => {
           let dirtySymsReg = new RegExp(['-'].join('|'), 'gi');
           font_name = font_name.replace(dirtySymsReg, '');
 
-          fs.appendFileSync(fontsStylePath, `@include font("${font_name}","${file_name}", ${weight}, ${style});\r\n`);
+          fs.appendFileSync(fontsStylePath, `@include fontFamily("${font_name}","${file_name}", ${weight}, ${style});\r\n`);
         }
 
         c_file_name = file_name;

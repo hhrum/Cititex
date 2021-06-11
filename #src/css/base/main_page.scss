@@ -1,4 +1,5 @@
 @import "../utilities/variables";
+@import "../utilities/mixins";
 
 // Стили главной страницы
 
@@ -12,18 +13,7 @@
   align-items: center;
 
   &__bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    @include bgImage;
   }
 
   &__content {
@@ -41,20 +31,13 @@
 
   &__title {
     color: $c_white;
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    @include fontMontserrat(500, 3.5rem, 3.5rem);
+
   }
 
   &__subtitle {
     color: $c_white;
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2rem;
-    line-height: 2rem;
+    @include fontMontserrat(400, 2rem, 2rem);
   }
 
   &__link {
@@ -62,11 +45,8 @@
     color: $c_black;
     background-color: $c_white;
     padding: 24px 96px;
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+
+    @include fontMontserrat(500, 1.25rem, 1.25rem);
   }
 }
 
@@ -74,11 +54,12 @@
 // Новинки
 
 .new-items {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin: 100px 0;
+  margin-top: $m_section_top;
 
   &__categories {
     display: flex;
@@ -86,11 +67,12 @@
   }
 
   &__category {
-    font: 500 normal 1rem/1rem Rubik, serif;
     margin: 12px;
     padding: 12px 20px;
     border: 1px solid $c_gray;
     cursor: pointer;
+
+    @include fontRubik(500, 1rem, 1rem);
 
     transition-duration: $transition_time;
 
@@ -115,14 +97,13 @@
 
 .sale {
   position: relative;
+  margin-top: $m_section_top;
 
   &__image {
     width: calc(100% - 1008px);
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      @include imageFit;
     }
   }
 
@@ -132,6 +113,7 @@
     right: 0;
     display: flex;
     flex-direction: column;
+    align-items: baseline;
     padding: 96px 56px;
   }
 
@@ -154,6 +136,12 @@
     display: flex;
     justify-content: center;
   }
+
+  .product-slider {
+    .splide__slide {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
 // О компании
@@ -163,7 +151,7 @@
   flex-direction: column;
   align-items: center;
 
-  margin: 100px 0;
+  margin-top: $m_section_top;
 
   &__title {
     margin-bottom: 36px;
@@ -206,6 +194,8 @@
 
   &__advantage-text {
     flex: 1 1;
+
+    @include fontMontserrat(400, 1rem, 1.2rem);
   }
 
   .section-button {
@@ -229,7 +219,7 @@
 }
 
 .catalog-categories {
-  margin-top: 100px;
+  margin-top: $m_section_top;
 
   .section-title {
     margin-bottom: 32px;
@@ -259,19 +249,12 @@
 
       &__bg {
         overflow: hidden;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
         z-index: -1;
 
+        @include bgImage;
+
         img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: $transition_time;
+          transition: $transition_time_long;
         }
       }
 
@@ -286,11 +269,7 @@
       &__title {
         max-width: 50%;
         color: $c_white;
-        font-family: Rubik, serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 3rem;
-        line-height: 3rem;
+        @include fontRubik(400, 3rem, 3rem);
       }
     }
 
@@ -327,7 +306,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: $c_bg_secondary;
-  margin-top: 100px;
+  margin-top: $m_section_top;
 
   &__content {
     flex: 1 1;
@@ -337,20 +316,12 @@
   }
 
   &__title {
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    @include fontMontserrat(500, 2.5rem, 2.5rem);
     margin-bottom: 28px;
   }
 
   &__subtitle {
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    @include fontMontserrat(400, 1rem, 1.5rem);
     margin-bottom: 48px;
   }
 
@@ -370,7 +341,7 @@
   flex-direction: column;
   align-items: center;
 
-  margin: 100px 0;
+  margin: $m_section_top 0;
 
   .product-slider {
     margin-top: 80px;

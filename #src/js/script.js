@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Распродажа
 
   new Splide('#sale-slider', {
-    width: 1008,
+    width: 1100,
     cover: true,
     arrows: false,
     classes: {
