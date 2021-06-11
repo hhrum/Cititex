@@ -200,3 +200,7 @@ img {
     margin: 0 56px;
   }
 }
+
+.breadcrumbs {
+  @include fontMontserrat(400, .7rem, 1rem);
+}

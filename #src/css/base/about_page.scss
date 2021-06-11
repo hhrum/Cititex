@@ -4,11 +4,8 @@
 
 .about-us {
    margin-top: 150px;
-
-   font-family: Montserrat, serif;
-   font-style: normal;
-   font-size: 1.3rem;
-   line-height: 1.5rem;
+   
+   @include fontMontserrat(400, 1.3rem, 1.5rem);
 
    &__title {
       margin-bottom: 75px;

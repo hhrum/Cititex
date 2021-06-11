@@ -16,12 +16,14 @@
 
     <main class="about-us">
         <section class="main-info">
-            <div class="about-us__title">Главная-о компании</div>
+            <div class="breadcrumbs">Главная-о компании</div>
 
             <div class="main-info__timeline timeline">
                 <div class="timeline__content">
 
-                    <img class="timeline__img" src="img/timeline_1.png" alt="">
+                    <div class="timeline__img">
+                        <img src="img/timeline_1.png" alt="">
+                    </div>
                     <div class="timeline__info">
                         <div class="about-us__title timeline__title">О нас</div>
                         <div class="timeline__text">
@@ -104,7 +106,9 @@
                     </span>
 
                 </div>
-                <img class="work__img" src="img/work_1.png" alt="">
+                <div class="work__img">
+                    <img src="img/work_1.png" alt="">
+                </div>
             </div>
 
             <div class="work__slider work-slider">
@@ -147,13 +151,15 @@
             </div>
         </section>
 
-        <section class="info">
-            <a href="#" class="info__link">Контакты &#8595;</a>
-            <a href="#" class="info__link">Сертификаты &#8595;</a>
-            <a href="#" class="info__link">Награды &#8595;</a>
-            <a href="#" class="info__link">Реквизиты &#8595;</a>
+        <section class="links">
+            <a href="#" class="links__link">Контакты &#8595;</a>
+            <a href="#" class="links__link">Сертификаты &#8595;</a>
+            <a href="#" class="links__link">Награды &#8595;</a>
+            <a href="#" class="links__link">Реквизиты &#8595;</a>
         </section>
     </main>
+
+    @@include('templates/footer.html')
 
 </body>
 
