@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cititex</title>
 
@@ -15,94 +15,134 @@
 
 <body>
 
-    @@include('templates/header.html')
+@@include('templates/header.html')
 
-    <main class="main">
+<main class="main">
 
-        <section class="main-slider no-padding">
+    <section class="main-slider no-padding">
 
-            <div id="main-slider" class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="main-slider-item">
-                                <div class="main-slider-item__bg">
-                                    <img src="img/main_slider.png">
-                                </div>
-
-                                <div class="main-slider-item__content">
-                                    <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
-                                    <p class="main-slider-item__subtitle">
-                                        Первая доставка покупок
-                                        <br>
-                                        в подарок до 1 марта
-                                    </p>
-                                    <a href="#" class=" section-button no-border">Купить</a>
-                                </div>
+        <div id="main-slider" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="main-slider-item">
+                            <div class="main-slider-item__bg">
+                                <img src="img/main_slider.png">
                             </div>
-                        </li>
-                        <li class="splide__slide">
-                            <div class="main-slider-item">
-                                <div class="main-slider-item__bg">
-                                    <img src="img/main_slider.png">
-                                </div>
 
-                                <div class="main-slider-item__content">
-                                    <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
-                                    <p class="main-slider-item__subtitle">
-                                        Первая доставка покупок
-                                        <br>
-                                        в подарок до 1 марта
-                                    </p>
-                                    <a href="#" class=" section-button no-border">Купить</a>
-                                </div>
+                            <div class="main-slider-item__content">
+                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                                <p class="main-slider-item__subtitle">
+                                    Первая доставка покупок
+                                    <br>
+                                    в подарок до 1 марта
+                                </p>
+                                <a href="#" class=" section-button no-border">Купить</a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="main-slider-item">
+                            <div class="main-slider-item__bg">
+                                <img src="img/main_slider.png">
+                            </div>
+
+                            <div class="main-slider-item__content">
+                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                                <p class="main-slider-item__subtitle">
+                                    Первая доставка покупок
+                                    <br>
+                                    в подарок до 1 марта
+                                </p>
+                                <a href="#" class=" section-button no-border">Купить</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-items">
+        <div class="section-title new-items__title">
+            Новинки от Cititex
+        </div>
+
+        <div class="new-items__categories">
+            <div class="new-items__category">Подушки</div>
+            <div class="new-items__category">Постельное белье</div>
+            <div class="new-items__category">Полотенца</div>
+            <div class="new-items__category is-active">Для кухни</div>
+            <div class="new-items__category">Халаты</div>
+            <div class="new-items__category">Праздники</div>
+        </div>
+
+        <div id="new-items-slider" class="splide product-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="section-button">
+            Показать всё
+        </a>
+
+    </section>
+
+    <section class="sale">
+        <div data-aos="fade-right">
+            <div id="sale-image" class="sale__image">
+                <img src="img/sale_image.png">
+            </div>
+        </div>
+        <div id="sale-content" class="sale__content">
+            <div class="sale__bg-color"></div>
+            <div class="section-title sale__title">Распродажа</div>
+            <div data-aos="fade-left">
+                <div id="sale-slider" class="splide sale__slider product-slider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                @@include("templates/product.html")
+                                @@include("templates/product.html")
+                                @@include("templates/product.html")
+                            </li>
+                            <li class="splide__slide">
+                                @@include("templates/product.html")
+                                @@include("templates/product.html")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sale__button-wrapper">
+                    <a href="#" class="section-button section-button--black">
+                        Показать всё
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="new-items">
-            <div class="section-title new-items__title">
-                Новинки от Cititex
-            </div>
-
-            <div class="new-items__categories">
-                <div class="new-items__category">Подушки</div>
-                <div class="new-items__category">Постельное белье</div>
-                <div class="new-items__category">Полотенца</div>
-                <div class="new-items__category is-active">Для кухни</div>
-                <div class="new-items__category">Халаты</div>
-                <div class="new-items__category">Праздники</div>
-            </div>
-
-            <div id="new-items-slider" class="splide product-slider">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                        </li>
-                        <li class="splide__slide">
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <a href="#" class="section-button">
-                Показать всё
-            </a>
-
-        </section>
-
-        <section class="sale">
+    <section class="about">
+        <div class="about__title section-title">19 лет создаём уют!</div>
+        <div class="about__subtitle section-subtitle">
+            Cititex - один из лидеров, среди интернет магазинов, по продаже текстильных изделий и №1 по ЮФО,
+            осуществляющий продажу и доставку текстильных товаров для дома.
+        </div>
+        <div class="about__content">
             <div data-aos="fade-right">
                 <div class="about__info">
                     <div class="about__title section-title">Сититекс это:</div>
@@ -178,101 +218,104 @@
                             </div>
                         </div>
 
-                        <a href="about.html" class="section-button">Подробнее</a>
-                    </div>
-                </div>
-                <div data-aos="fade-left">
-                    <div class="about__images">
-                        <img src="img/about_image_1.png" class="about__first-image">
-                        <img src="img/about_image_2.png" class="about__second-image">
+                        <div class="sale__button-wrapper">
+                            <a href="about.html" class="section-button">Подробнее</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </section>
-
-        <section class="catalog-categories">
-            <div class="section-title">Каталог</div>
-            <div class="catalog-categories__grid">
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
+            <div data-aos="fade-left">
+                <div class="about__images">
+                    <img src="img/about_image_1.png" class="about__first-image">
+                    <img src="img/about_image_2.png" class="about__second-image">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="connect-section all-padding">
-            <div class="connect-section__content">
-                <div class="connect-section__title">
-                    Наш инстаграм
-                </div>
-                <div class="connect-section__subtitle">
-                    Подпишись, чтобы быть <br> в курсе
-                </div>
-                <a href="#" class="section-button">
-                    Подписаться
-                </a>
+    <section class="catalog-categories">
+        <div class="section-title">Каталог</div>
+        <div class="catalog-categories__grid">
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
             </div>
-            <div class="connect-section__images">
-                <div class="connect-section__image">
-                    <img src="img/instagram_1.png">
-                </div>
-                <div class="connect-section__image">
-                    <img src="img/instagram_1.png">
-                </div>
-                <div class="connect-section__image">
-                    <img src="img/instagram_1.png">
-                </div>
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
             </div>
-        </section>
-
-        <section class="popular">
-
-            <div class="section-title new-items__title">
-                Популярное от Cititex
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
             </div>
-
-            <div id="popular-slider" class="splide product-slider">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                        </li>
-                        <li class="splide__slide">
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                            @@include("templates/product.html")
-                        </li>
-                    </ul>
-                </div>
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
             </div>
+            <div class="catalog-categories__item">
+                @@include("templates/catalog_category.html")
+            </div>
+        </div>
+    </section>
 
+    <section class="connect-section all-padding">
+        <div class="connect-section__content">
+            <div class="connect-section__title">
+                Наш инстаграм
+            </div>
+            <div class="connect-section__subtitle">
+                Подпишись, чтобы быть <br> в курсе
+            </div>
             <a href="#" class="section-button">
-                Показать всё
+                Подписаться
             </a>
+        </div>
+        <div class="connect-section__images">
+            <div class="connect-section__image">
+                <img src="img/instagram_1.png">
+            </div>
+            <div class="connect-section__image">
+                <img src="img/instagram_1.png">
+            </div>
+            <div class="connect-section__image">
+                <img src="img/instagram_1.png">
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <section class="popular">
 
-    </main>
+        <div class="section-title new-items__title">
+            Популярное от Cititex
+        </div>
 
-    @@include('templates/footer.html')
+        <div id="popular-slider" class="splide product-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                    <li class="splide__slide">
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                        @@include("templates/product.html")
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    <script src="js/script.min.js"></script>
+        <a href="#" class="section-button">
+            Показать всё
+        </a>
+
+    </section>
+
+</main>
+
+@@include('templates/footer.html')
+
+<script src="js/script.min.js"></script>
 </body>
 
 </html>
