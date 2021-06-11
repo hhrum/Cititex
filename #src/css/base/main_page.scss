@@ -322,49 +322,6 @@
   }
 }
 
-.instagram {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $c_bg_secondary;
-  margin-top: 100px;
-
-  &__content {
-    flex: 1 1;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-  }
-
-  &__title {
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    margin-bottom: 28px;
-  }
-
-  &__subtitle {
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 48px;
-  }
-
-  &__images {
-    flex: 0 1;
-    display: flex;
-    margin: 32px -56px;
-  }
-
-  &__image {
-    margin: 0 56px;
-  }
-}
-
 .popular {
   display: flex;
   flex-direction: column;
