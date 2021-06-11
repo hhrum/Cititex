@@ -301,46 +301,6 @@
   }
 }
 
-.instagram {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $c_bg_secondary;
-  margin-top: $m_section_top;
-
-  &__content {
-    flex: 1 1;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-  }
-
-  &__title {
-    @include fontMontserrat(500, 2.5rem, 2.5rem);
-    margin-bottom: 28px;
-  }
-
-  &__subtitle {
-    @include fontMontserrat(400, 1rem, 1.5rem);
-    margin-bottom: 48px;
-  }
-
-  &__images {
-    flex: 0 1;
-    display: flex;
-    margin: 32px -56px;
-  }
-
-  &__image {
-    width: 320px;
-    margin: 0 56px;
-
-    img {
-      @include imageFit;
-    }
-  }
-}
-
 .popular {
   display: flex;
   flex-direction: column;

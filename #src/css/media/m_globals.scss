@@ -4,6 +4,34 @@
   html {
     font-size: 14px;
   }
+
+  //
+  .connect-section {
+
+    &__content {
+      flex: 1 1;
+    }
+
+    &__images {
+      margin: 0 -16px;
+      flex: 1 1;
+      display: grid;
+      grid-template-areas:
+              "big big"
+              ". .";
+    }
+
+    &__image {
+      width: 200px;
+      margin: 16px;
+
+      &:first-child {
+        width: auto;
+        height: 200px;
+        grid-column: big;
+      }
+    }
+  }
 }
 
 // sm
