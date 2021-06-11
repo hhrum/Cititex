@@ -3,8 +3,7 @@
 // Стили страницы о нас
 
 .about-us {
-   margin-top: 150px;
-   
+   margin-top: 120px;
    @include fontMontserrat(400, 1.3rem, 1.5rem);
 
    &__title {
@@ -24,6 +23,8 @@
 
    &__img {
       margin-right: 20px;
+
+      @include imageFit;
    }
 
    &__title {
@@ -68,7 +69,7 @@
 
          transition: $transition_time;
 
-         &:hover {
+         &:hover, &.active {
             color: $c_accent;
 
             .timeline-slider__line {
@@ -114,6 +115,10 @@
       font-weight: 400;
    }
 
+   &__img {
+      @include imageFit;
+   }
+
    &__slider {
       margin: 150px 0;
    }
@@ -154,7 +159,7 @@
             padding: 0 0 0 20px;
          }
 
-         &:hover {
+         &:hover, &.active {
             color: $c_accent;
             font-size: 2.2rem;
          }
@@ -162,7 +167,7 @@
    }
 }
 
-.info {
+.links {
   display: flex;
   justify-content: space-between;
   margin: 70px 0;
