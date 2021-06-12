@@ -117,7 +117,7 @@ img {
   background-color: $c_black;
 }
 
-.connect-section{
+.connect-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -175,4 +175,47 @@ img {
       @include imageFit;
     }
   }
+
+  &__register {
+    display: flex;
+
+    &-user-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 25px;
+
+      input {
+        padding: 15px 40px;
+        margin-bottom: 25px;
+
+        @include fontMontserrat(400, 1rem, 1rem);
+        border: none;
+
+        &:last-child {
+          margin-bottom: unset;
+        }
+      }
+
+    }
+
+    &-user-comment {
+
+      textarea {
+        padding: 40px;
+        min-width: 600px;
+        height: 100%;
+        resize: none;
+
+        @include fontMontserrat(400, 1rem, 1rem);
+        border: none;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  z-index: 1;
+  padding: 10px $p_section 0;
+  @include fontMontserrat(400, .7rem, 1rem);
 }

@@ -1,0 +1,145 @@
+@import "../utilities/variables";
+
+// Стили страницы Сотрудничество
+
+.cooperation {
+  padding-top: 120px;
+
+  @include fontMontserrat(400, 1.6rem, 1.9rem);
+}
+
+.intro {
+  height: 666px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+
+  color: $c_white;
+
+  &__img-bg {
+    @include bgImage;
+    filter: brightness(40%)
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 1.9rem;
+  }
+
+  &__subtitle {
+    padding: 30px 0;
+
+    @include fontMontserrat(300, 1.3rem, 2.2rem);
+  }
+
+  > .breadcrumbs {
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    font-weight: 300;
+  }
+}
+
+.info-text {
+  padding-top: 120px;
+  @include fontMontserrat(400, 1.6rem, 2rem);
+}
+
+.informations-tabs {
+  padding-top: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 75px;
+
+    cursor: pointer;
+
+    &:hover, &.active {
+      .informations-tabs__num {
+        background-color: $c_black;
+        color: $c_white;
+      }
+
+      .informations-tabs__item-text {
+        color: $c_accent;
+        font-weight: 700;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+  }
+
+  &__num {
+    min-width: 95px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+    @include fontMontserrat(700, 2.2rem, 2.2rem);
+    color: $c_accent;
+
+    border: 1px solid $c_black;
+    transition: $transition_time;
+  }
+
+  &__item-text {
+    color: $c_gray;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 65%;
+    padding: 35px 50px;
+
+    background-color: $c_bg_secondary;
+
+    &-text {
+      margin-right: 40px;
+
+      div {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: unset;
+        }
+      }
+    }
+
+    &-img {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
+  }
+}
+
+.clients {
+  padding-top: 120px;
+
+  &__title {
+    @include fontMontserrat(600, 1.8rem, 1.5rem);
+  }
+
+  &__logos {
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
