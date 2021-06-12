@@ -40,6 +40,7 @@ const cb = () => null;
 const {src, dest, series, parallel} = require('gulp'),
   gulp = require('gulp'),
   fs = require('fs'),
+  cache = require('gulp-cache'),
   rename = require('gulp-rename'),
   bs = require('browser-sync').create(),
   rimraf = require('rimraf'),
@@ -56,8 +57,10 @@ const {src, dest, series, parallel} = require('gulp'),
   imagemin = require('gulp-imagemin'),
   pngquant = require('imagemin-pngquant'),
   // fonts
-  ttf2woff = require('gulp-ttf2woff'),
-  ttf2woff2 = require('gulp-ttf2woff2');
+  ttf2woff = require('gulp-ttf2woff');
+
+const ttf2woff2 = require('gulp-ttf2woff2');
+
 
 const browserSync = (done) => {
   bs.init(config);
@@ -181,6 +184,10 @@ const clean = (cb) => {
   rimraf(path.clean, cb);
 }
 
+const clearCache = () => {
+  return cache.clearAll();
+}
+
 const watchFiles = (done) => {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
@@ -201,6 +208,7 @@ exports.fonts = fonts;
 exports.includeFonts = includeFonts;
 exports.buildFonts = buildFonts;
 exports.clean = clean;
+exports.clearCache = clearCache;
 exports.build = build;
 exports.watch = watch
 exports.default = watch;

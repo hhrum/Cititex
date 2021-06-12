@@ -47,6 +47,7 @@ function initSliders() {
   const productSwiper = new Swiper('.product-swiper--big', {
     direction: 'horizontal',
     speed: 1000,
+    spaceBetween: 32,
 
     pagination: {
       el: '.swiper-pagination',
@@ -57,28 +58,23 @@ function initSliders() {
       // width >= 320px
       320: {
         slidesPerView: 1,
-        spaceBetween: 16,
         slidesPerGroup: 1,
       },
-      // width is >= 640px
-      660: {
+      500: {
         slidesPerView: 2,
-        spaceBetween: 16,
         slidesPerGroup: 2,
       },
-      960: {
+      // width is >= 640px
+      800: {
         slidesPerView: 3,
-        spaceBetween: 32,
         slidesPerGroup: 3,
       },
-      1300: {
+      1100: {
         slidesPerView: 4,
-        spaceBetween: 32,
         slidesPerGroup: 4,
       },
-      1600: {
+      1500: {
         slidesPerView: 5,
-        spaceBetween: 32,
         slidesPerGroup: 5,
       }
     },
@@ -87,6 +83,9 @@ function initSliders() {
   const productSwiperSlim = new Swiper('.product-swiper--slim', {
     direction: 'horizontal',
     speed: 1000,
+    spaceBetween: 32,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
 
     pagination: {
       el: '.swiper-pagination',
@@ -97,24 +96,14 @@ function initSliders() {
       // width >= 320px
       320: {
         slidesPerView: 1,
-        spaceBetween: 16,
         slidesPerGroup: 1,
       },
-      // width is >= 640px
-      660: {
+      500: {
         slidesPerView: 2,
-        spaceBetween: 16,
         slidesPerGroup: 2,
       },
-      // width is >= 640px
-      960: {
-        slidesPerView: 2,
-        spaceBetween: 32,
-        slidesPerGroup: 2,
-      },
-      1200: {
+      1100: {
         slidesPerView: 3,
-        spaceBetween: 32,
         slidesPerGroup: 3,
       },
     },
