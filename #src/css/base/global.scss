@@ -209,5 +209,5 @@ img {
   z-index: 1;
   padding: 10px $p_section 0;
 
-  @include fontMontserrat(400, .7rem, 1rem);
+  @include fontMontserrat(400, .7rem);
 }
