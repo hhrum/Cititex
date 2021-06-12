@@ -1,7 +1,7 @@
 @import "../../utilities/variables";
 
 .subscribe-news {
-  margin: 100px 0;
+  margin: $m_section_top 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,13 +20,10 @@
     width: 800px;
     margin-right: 8px;
     text-align: center;
-    border: 1px solid $c_black;
 
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1rem;
+    @include fontMontserrat(500, 1rem);
+    
+    border: 1px solid $c_black;
 
     &::placeholder {
       color: $c_gray;
@@ -35,19 +32,17 @@
 
   &__personal-info {
     margin-top: 40px;
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.8rem;
-    line-height: 1rem;
+
+    @include fontMontserrat(400, .8rem, 1rem);
   }
 }
 
 .footer {
-  background-color: $c_bg_secondary;
-
   padding: 48px $p_section 32px;
+
   font-family: Montserrat, serif;
+
+  background-color: $c_bg_secondary;
 
   &__header {
 
@@ -55,18 +50,18 @@
 
   &__content {
     display: flex;
-    margin: 48px 0;
     justify-content: space-between;
+    margin: 48px 0;
 
-    >* {
+    > * {
       flex: 1 1;
     }
 
     .nav {
-
       a {
-        color: $c_black;
         display: block;
+
+        color: $c_black;
 
         &:hover {
           color: $c_gray;
@@ -86,9 +81,8 @@
 
         &--bold {
           margin: 12px 0;
-          font-weight: 600;
-          font-size: 1rem;
-          line-height: 1rem;
+
+          @include fontMontserrat(600, 1rem);
         }
       }
 
@@ -108,7 +102,7 @@
     justify-content: space-between;
     align-items: center;
 
-    >* {
+    > * {
       text-align: center;
       flex: 1 1;
 
@@ -123,12 +117,11 @@
   }
 
   &__accent-text {
-    @include fontMontserrat(700, 1.2rem, 1.2rem);
+    @include fontMontserrat(700, 1.2rem);
   }
 
   &__secondary-text {
     color: $c_gray;
     @include fontMontserrat(500, 0.8rem, 1rem);
   }
-
 }

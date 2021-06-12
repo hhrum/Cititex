@@ -52,15 +52,16 @@ img {
 
 .section-button {
   display: block;
-  color: $c_black;
-  background-color: $c_white;
   padding: 24px 64px;
-  border: 1px solid $c_black;
-  border-radius: 0;
 
   @include fontMontserrat(500, 1.2rem, 1.2rem);
-  transition-duration: $transition_time;
+  color: $c_black;
   cursor: pointer;
+
+  background-color: $c_white;
+  border: 1px solid $c_black;
+  border-radius: 0;
+  transition-duration: $transition_time;
 
   &:hover,
   &:focus {
@@ -107,8 +108,8 @@ img {
 }
 
 .swiper-pagination-bullet {
-  width: 64px;
-  height: 4px;
+  width: 64px; height: 4px;
+
   background-color: $c_gray;
   border-radius: 0;
 }
@@ -118,42 +119,33 @@ img {
 }
 
 .connect-section {
+  margin-top: $m_section_top;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
   background-color: $c_bg_secondary;
-  margin-top: 100px;
 
   &__content {
-    flex: 1 1;
     display: flex;
+    flex: 1 1;
     flex-direction: column;
     align-items: baseline;
   }
 
   &__title {
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
     margin-bottom: 28px;
+    @include fontMontserrat(500, 2.5rem);
   }
 
   &__subtitle {
-    font-family: Montserrat, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5rem;
     margin-bottom: 48px;
+    @include fontMontserrat(400, 1rem, 1.5rem);
   }
 
   &__consent {
     margin-top: 45px;
-
-    font-weight: 400;
-    font-size: .7rem;
+    @include fontMontserrat(400, .7rem);
 
     a {
       color: #00bfff;
@@ -161,14 +153,13 @@ img {
   }
 
   &__images {
-    flex: 1 1;
     display: flex;
+    flex: 1 1;
     margin: 32px -26px;
   }
 
   &__image {
-    width: 260px;
-    height: 260px;
+    width: 260px; height: 260px;
     margin: 0 26px;
 
     img {
@@ -189,25 +180,24 @@ img {
         padding: 15px 40px;
         margin-bottom: 25px;
 
-        @include fontMontserrat(400, 1rem, 1rem);
+        @include fontMontserrat(400, 1rem);
+        
         border: none;
 
         &:last-child {
           margin-bottom: unset;
         }
       }
-
     }
 
     &-user-comment {
-
       textarea {
+        min-width: 600px; height: 100%;
         padding: 40px;
-        min-width: 600px;
-        height: 100%;
         resize: none;
 
         @include fontMontserrat(400, 1rem, 1rem);
+
         border: none;
       }
     }
@@ -217,5 +207,6 @@ img {
 .breadcrumbs {
   z-index: 1;
   padding: 10px $p_section 0;
+
   @include fontMontserrat(400, .7rem, 1rem);
 }

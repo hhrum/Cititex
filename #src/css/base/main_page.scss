@@ -19,24 +19,22 @@
 }
 
 .main-slider-item {
+  padding-top: $m_header_top;
   height: 920px;
-  padding-top: 120px;
-  position: relative;
-
   display: flex;
   align-items: center;
+  position: relative;
 
   &__bg {
     @include bgImage;
   }
 
   &__content {
+    z-index: 0;
     display: flex;
     flex-direction: column;
     align-items: baseline;
-
     padding-left: 60px;
-    z-index: 0;
 
     > * {
       margin: 24px 0;
@@ -45,22 +43,22 @@
 
   &__title {
     color: $c_white;
-    @include fontMontserrat(500, 3.5rem, 3.5rem);
-
+    @include fontMontserrat(500, 3.5rem);
   }
 
   &__subtitle {
     color: $c_white;
-    @include fontMontserrat(400, 2rem, 2rem);
+    @include fontMontserrat(400, 2rem);
   }
 
   &__link {
     display: block;
-    color: $c_black;
-    background-color: $c_white;
     padding: 24px 96px;
 
-    @include fontMontserrat(500, 1.25rem, 1.25rem);
+    color: $c_black;
+    @include fontMontserrat(500, 1.25rem);
+
+    background-color: $c_white;
   }
 }
 
@@ -68,11 +66,10 @@
 
 .new-items {
   width: 100%;
+  margin-top: $m_section_top;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-top: $m_section_top;
 
   &__categories {
     display: flex;
@@ -82,21 +79,23 @@
   &__category {
     margin: 12px;
     padding: 12px 20px;
-    border: 1px solid $c_gray;
+
+    @include fontRubik(500, 1rem);
     cursor: pointer;
 
-    @include fontRubik(500, 1rem, 1rem);
-
+    border: 1px solid $c_gray;
     transition-duration: $transition_time;
 
     &.is-active {
       color: $c_accent;
+
       border: 1px solid $c_black;
     }
 
     &:hover {
-      transform: scale(1.1);
       color: $c_accent;
+
+      transform: scale(1.1);
     }
   }
 
@@ -108,18 +107,17 @@
 // Распродажа
 
 .sale {
-  position: relative;
   margin-top: $m_section_top;
+  position: relative;
   display: flex;
 
-  >*:first-child {
+  > *:first-child {
     flex: 1 1;
   }
 
   &__image {
-    width: 100%;
-    height: 100%;
-
+    width: 100%; height: 100%;
+    
     @include bgImage();
   }
 
@@ -154,13 +152,14 @@
   }
 
   &__bg-color {
-    background-color: $c_bg_secondary;
+    z-index: -1;
     position: absolute;
     top: 48px;
     right: 0;
     bottom: -32px;
     left: -128px;
-    z-index: -1;
+
+    background-color: $c_bg_secondary;
   }
 
   &__button-wrapper {
@@ -173,11 +172,10 @@
 // О компании
 
 .about {
+  margin-top: $m_section_top;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-top: $m_section_top;
 
   &__title {
     margin-bottom: 36px;
@@ -265,17 +263,15 @@
     margin: 12px;
 
     .catalog-category {
+      width: 100%; height: 100%;
       display: flex;
       align-items: flex-end;
-      width: 100%;
-      height: 100%;
       position: relative;
       padding: 56px;
 
-
       &__bg {
-        overflow: hidden;
         z-index: -1;
+        overflow: hidden;
 
         @include bgImage;
 
@@ -294,8 +290,9 @@
 
       &__title {
         max-width: 50%;
-        color: $c_white;
+
         @include fontRubik(400, 3rem, 3rem);
+        color: $c_white;
       }
     }
 
@@ -328,11 +325,10 @@
 }
 
 .popular {
+  margin: $m_section_top 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin: $m_section_top 0;
 
   .product-swiper {
     margin-top: 80px;
