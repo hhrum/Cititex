@@ -14,7 +14,7 @@
 
     &__images {
       margin: 0 -16px;
-      flex: 1 1;
+      flex: 0 1;
       display: grid;
       grid-template-areas:
               "big big"
@@ -23,20 +23,36 @@
 
     &__image {
       width: 200px;
+      height: 200px;
       margin: 16px;
 
       &:first-child {
         width: auto;
-        height: 200px;
         grid-column: big;
       }
     }
   }
+
 }
 
 // sm
 @media screen and (max-width: 992px) {
+  html {
+    --p-section: 32px;
+  }
 
+  .connect-section {
+    &__image {
+      &:first-child {
+        width: 200px;
+        height: 200px;
+      }
+
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+  }
 }
 
 // xs
