@@ -23,7 +23,6 @@
 
    &__img {
       margin-right: 20px;
-
       @include imageFit;
    }
 
@@ -95,6 +94,7 @@
 
 .work {
    margin-bottom: 150px;
+
    &__content {
       display: flex;
       justify-content: space-between;
@@ -116,7 +116,9 @@
    }
 
    &__img {
-      @include imageFit;
+      img {
+         @include imageFit;
+      }
    }
 
    &__slider {
