@@ -1,0 +1,77 @@
+@import "../utilities/variables";
+
+// Стили страницы о нас
+
+.news {
+  margin-top: $m_header_top;
+  @include fontMontserrat(500, 1.8rem);
+
+  .section-title {
+    margin-bottom: 50px;
+    @include fontMontserrat(600, 2rem);
+ }
+}
+
+.newslist {
+  margin-top: 40px;
+
+  &__content {
+    margin-top: 50px;
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    margin-bottom: 25px;
+
+    border: 1px solid $c_black;
+
+    &__img {
+      margin-right: 30px;
+    }
+
+    &__content {
+      .section-button {
+        padding: 25px 130px;
+      }
+    }
+
+    &__title {
+      font-weight: 600;
+    }
+
+    &__text {
+      margin: 40px 0 25px;
+    }
+
+    &__date {
+      position: absolute;
+      bottom: 70px;
+      right: 110px;
+
+      @include fontMontserrat(400, 1rem);
+    }
+  }
+
+  &-pagination {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include fontMontserrat(400, 1rem);
+    
+    &__page {
+      display: inline-block;
+      padding: 0 5px;
+
+      transition: $transition_time;
+      
+      &:hover, &.active {
+        @include fontMontserrat(500, 1rem);
+        transform: scale(1.25);
+      }
+    }
+  }
+}
