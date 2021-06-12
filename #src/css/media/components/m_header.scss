@@ -1,17 +1,55 @@
 
+@media screen and (max-width: 1680px) {
+  header {
+    .header {
+      height: 80px;
+
+      &__search,
+      &__sale,
+      &__connection {
+        display: none;
+      }
+
+      &__item {
+        &-text {
+          display: none;
+        }
+      }
+    }
+
+    .header-down {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+    }
+  }
+}
+
 // md
 @media screen and (max-width: 1200px) {
-  .drop-down-menu {
 
-    &__image {
-      display: none;
+  header {
+
+    .header {
+
     }
+
+
   }
 }
 
 // sm
 @media screen and (max-width: 992px) {
+  header {
+    .drop-down-menu {
 
+      &__image {
+        //display: none;
+      }
+    }
+  }
 }
 
 // xs

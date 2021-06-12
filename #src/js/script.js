@@ -16,7 +16,7 @@ function toggleDropDownMenu() {
   dropDownMenuToggle.classList.toggle('is-active', dropDownMenuIsActive);
 }
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function (e) {
   if (dropDownMenuIsActive) {
     dropDownMenuIsActive = false;
     toggleDropDownMenu();

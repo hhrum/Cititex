@@ -4,22 +4,24 @@
 
 header {
   z-index: 2;
-  height: 120px;
+  height: var(--header-size);
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+
+  font-family: Montserrat, serif;
 
   .header {
     z-index: 1;
-    height: 100%;
-    padding: 0 $p_section;
+    height: var(--header-size);
+    padding: 0 var(--p-section);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    font-family: Montserrat, serif;
 
     background-color: $c_white;
 
@@ -41,7 +43,7 @@ header {
     }
 
     &__left {
-      justify-content: space-between;
+      //justify-content: space-between;
 
       > * {
         margin-right: 32px;
@@ -49,19 +51,12 @@ header {
     }
 
     &__search {
-      width: 100%; height: 35px;
-      position: relative;
-      display: flex;
-      justify-content: space-between;
+      width: 100%;
 
-      .header__icon {
-        position: absolute;
-        left: 0;
-      }
-
-      &.active + .header__sale {
-        width: 0;
-        overflow-x: hidden;
+      .header-search {
+        &__input {
+          width: 100%;
+        }
       }
     }
 
@@ -71,16 +66,6 @@ header {
 
       &:hover {
         border: 1px solid $c_black;
-      }
-    }
-
-    &__sale {
-      font-weight: 600;
-
-      transition: $transition_time;
-
-      &:hover {
-        color: $c_accent;
       }
     }
 
@@ -103,7 +88,7 @@ header {
     }
 
     &-icon {
-      width: 37px; height: 37px;
+      width: 36px; height: 36px;
       position: relative;
 
       img {
@@ -131,11 +116,6 @@ header {
           display: none;
         }
       }
-    }
-
-    &__connection {
-      display: flex;
-      flex-direction: column;
     }
 
     // Стили для кноки, открывающей меню
@@ -199,19 +179,83 @@ header {
     }
   }
 
+  .header-down {
+    z-index: 1;
+    display: none;
+    padding: 0 var(--p-section);
+
+    &__child-wrapper {
+      flex: 1 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .header-search {
+    height: 35px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+
+    &__input {
+      padding-left: 48px;
+    }
+
+    &__icon {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &-icon {
+      @include bgImage(contain);
+      z-index: 1;
+    }
+
+    &.active + .header__sale {
+      width: 0;
+      overflow-x: hidden;
+    }
+  }
+
+  .header-sale {
+    font-weight: 600;
+
+    transition: $transition_time;
+
+    &:hover {
+      color: $c_accent;
+    }
+  }
+
+  .header-connection {
+    display: flex;
+    flex-direction: column;
+  }
+
   .drop-down-menu {
     z-index: 0;
     padding: 0 56px 56px;
+    overflow-y: scroll;
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 100%;
     right: 0;
     left: 0;
+    max-height: calc(100vh - var(--header-size));
 
     background-color: $c_white;
     transform: translateY(-100%);
     transition: $transition_time;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
 
     &.is-active {
       transform: translateY(0);
@@ -219,13 +263,20 @@ header {
 
     &__content {
       display: flex;
+      flex: 2 1;
+    }
+
+    &__image-wrapper {
       flex: 1 1;
+      position: relative;
     }
 
     &__image {
-      img {
-        @include imageFit(contain);
-      }
+
+      @include bgImage;
+      //img {
+      //  @include imageFit(contain);
+      //}
     }
 
     &__nav {
@@ -237,7 +288,7 @@ header {
         align-items: baseline;
 
         font-family: Montserrat, serif;
-        font-style: 400;
+        font-style: normal;
 
         a {
           display: block;
