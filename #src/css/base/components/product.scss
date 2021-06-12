@@ -3,14 +3,35 @@
 // Товар
 
 .product {
-  width: 320px;
+  //width: 320px;
   display: flex;
   flex-direction: column;
 
   &__header {
     position: relative;
-    width: 320px;
-    height: 320px;
+    // TODO: сори, за эту хуйню
+    width: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px * 4) / 5);
+    height: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px * 4) / 5);
+
+    @media screen and (max-width: 1600px) {
+      width: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px * 3) / 4);
+      height: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px * 3) / 4);
+    }
+
+    @media screen and (max-width: 1300px) {
+      width: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px * 2) / 3);
+      height: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px * 2) / 3);
+    }
+
+    @media screen and (max-width: 960px) {
+      width: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px) / 2);
+      height: calc(calc(100vw - var(--p-section) - var(--p-section) - 32px) / 2);
+    }
+
+    @media screen and (max-width: 660px) {
+      width: calc(100vw - var(--p-section) - var(--p-section));
+      height: calc(100vw - var(--p-section) - var(--p-section));
+    }
   }
 
   &__image {

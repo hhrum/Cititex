@@ -1,7 +1,5 @@
 require('@splidejs/splide');
 const AOS = require('aos');
-const products = require('./data/products');
-const { productMaker } = require('./utilities/makers');
 
 let dropDownMenuIsActive = false;
 const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
@@ -121,26 +119,4 @@ function initSliders() {
       },
     },
   });
-}
-
-function showProductsAtSlider(products, slider) {
-  const productsForShow = [...products];
-  const list = slider.getElementsByClassName('splide__list')[0];
-  list.innerHTML = "";
-  const productAtPageCount = Math.floor(window.screen.width / 320);
-  const pages = [];
-
-  while (productsForShow.length > 0 && pages.length < 5) {
-    pages.push(productsForShow.splice(0, productAtPageCount));
-  }
-
-  pages.forEach(page => {
-    const li = document.createElement('li');
-    li.className = 'splide__slide';
-
-    page.forEach(product => li.appendChild(productMaker(product)));
-
-    list.appendChild(li);
-  })
-
 }
