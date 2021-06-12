@@ -3,9 +3,13 @@
 // Стили страницы Сотрудничество
 
 .cooperation {
-  padding-top: 120px;
+  margin-top: $m_header_top;
 
   @include fontMontserrat(400, 1.6rem, 1.9rem);
+
+  .section-title {
+    @include fontMontserrat(600, 2rem, 2rem);
+ }
 }
 
 .intro {
@@ -20,12 +24,11 @@
 
   &__img-bg {
     @include bgImage;
-    filter: brightness(40%)
+    filter: brightness(40%);
   }
 
   &__title {
-    font-weight: 500;
-    font-size: 1.9rem;
+    @include fontMontserrat(500, 2rem);
   }
 
   &__subtitle {
@@ -34,23 +37,21 @@
     @include fontMontserrat(300, 1.3rem, 2.2rem);
   }
 
-  > .breadcrumbs {
+  .breadcrumbs {
     position: absolute;
-    top: 40px;
-    left: 0;
+    top: 40px; left: 0;
 
     font-weight: 300;
   }
 }
 
-.info-text {
-  padding-top: 120px;
+.informations-text {
+  margin-top: $m_section_top;
   @include fontMontserrat(400, 1.6rem, 2rem);
 }
 
 .informations-tabs {
-  padding-top: 120px;
-
+  margin-top: $m_section_top;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,14 +81,13 @@
   }
 
   &__num {
-    min-width: 95px;
-    height: 95px;
+    min-width: 95px; height: 95px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 20px;
 
-    @include fontMontserrat(700, 2.2rem, 2.2rem);
+    @include fontMontserrat(700, 2.2rem);
     color: $c_accent;
 
     border: 1px solid $c_black;
@@ -129,11 +129,7 @@
 }
 
 .clients {
-  padding-top: 120px;
-
-  &__title {
-    @include fontMontserrat(600, 1.8rem, 1.5rem);
-  }
+  margin-top: $m_section_top;
 
   &__logos {
     padding-top: 70px;

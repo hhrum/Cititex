@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cititex</title>
 
-    <link rel="stylesheet" href="css/style.min.css">
+    @@include('templates/styles.html')
 </head>
 
 <body>
@@ -30,7 +30,7 @@
             <a class="section-button no-border" href="#">Подать заявку &#8594;</a>
         </section>
 
-        <section class="info-text">
+        <section class="informations-text">
             Быть оптовым или корпоративным клиентом Cititex - это выгодно и удобно! Наша компания уделяет большое
             внимание работе с оптовыми клиентами. Мы всегда стараемся учитывать все ваши пожелания и своевременно
             выполнять ваши заказы. Девиз нашей компании: Cititex - с нами легко!
@@ -132,7 +132,7 @@
         </section>
 
         <section class="clients">
-            <div class="clients__title">Наши ключевые клиенты:</div>
+            <div class="section-title">Наши ключевые клиенты:</div>
 
             <div class="clients__logos">
                 <div class="clients__logo">
@@ -201,6 +201,7 @@
         </section>
 
         @@include('templates/footer.html')
+        @@include('templates/scripts.html')
     </main>
 
 </body>

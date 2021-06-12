@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cititex</title>
 
-    <link rel="stylesheet" href="css/style.min.css">
+    @@include('templates/styles.html')
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                         <img src="img/timeline_1.png" alt="">
                     </div>
                     <div class="timeline__info">
-                        <div class="about-us__title timeline__title">О нас</div>
+                        <div class="timeline__title">О нас</div>
                         <div class="timeline__text">
                             Cititex" - один из лидеров, среди интернет магазинов, по продаже текстильных изделий и №1 по
                             ЮФО,
@@ -76,7 +76,7 @@
         </section>
 
         <section class="work">
-            <div class="about-us__title">Работа в Cititex</div>
+            <div class="section-title">Работа в Cititex</div>
 
             <div class="work__content">
                 <div class="work__info">
@@ -161,7 +161,7 @@
     </main>
 
     @@include('templates/footer.html')
-
+    @@include('templates/scripts.html')
 </body>
 
 </html>

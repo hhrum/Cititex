@@ -3,25 +3,25 @@
 // Шапка
 
 header {
+  z-index: 2;
   height: 120px;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
 
-  z-index: 2;
-
   .header {
-    background-color: $c_white;
-    position: relative;
+    z-index: 1;
     height: 100%;
     padding: 0 $p_section;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
-
+    
     font-family: Montserrat, serif;
+
+    background-color: $c_white;
 
     > * {
       display: flex;
@@ -49,12 +49,10 @@ header {
     }
 
     &__search {
-      width: 100%;
-      height: 35px;
+      width: 100%; height: 35px;
       position: relative;
       display: flex;
       justify-content: space-between;
-
 
       .header__icon {
         position: absolute;
@@ -91,7 +89,6 @@ header {
     }
 
     &__logo {
-
       &.active {
         filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
       }
@@ -106,9 +103,8 @@ header {
     }
 
     &-icon {
+      width: 37px; height: 37px;
       position: relative;
-      width: 37px;
-      height: 37px;
 
       img {
         @include imageFit(contain);
@@ -116,6 +112,7 @@ header {
 
       &__badge {
         z-index: 1;
+        height: 22px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -123,9 +120,8 @@ header {
         top: 0;
         right: -10px;
         width: 22px;
-        height: 22px;
 
-        font-size: 14px;
+        font-size: .8rem;
 
         background-color: $c_white;
         border: 1px solid $c_black;
@@ -142,68 +138,53 @@ header {
       flex-direction: column;
     }
 
-
     // Стили для кноки, открывающей меню
     &__menu-open {
-      min-width: 40px;
-      height: 36px;
-      position: relative;
-      border-bottom: 2px solid $c_black;
+      min-width: 40px; height: 36px;
       box-sizing: border-box;
-      transition: $transition_time;
-      cursor: pointer;
+      position: relative;
       overflow: hidden;
 
+      cursor: pointer;
 
-      &:before {
+      border-bottom: 2px solid $c_black;
+      transition: $transition_time;
+
+      &:before, &:after {
+        content: "";
+        display: block;
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
-        content: "";
-        display: block;
         height: 2px;
+
         background: $c_black;
         transition: $transition_time;
       }
 
       &:after {
-        position: absolute;
-        left: 0;
-        right: 0;
         top: 50%;
-        content: "";
-        display: block;
-        height: 2px;
-        background: $c_black;
-        transition: $transition_time;
       }
 
       &.is-active {
         border: 0;
 
-        &:before {
+        &:before, &:after {
           content: "";
           display: block;
           width: 100%;
+          margin-top: -55%;
+          margin-left: 0;
+          top: 100%;
+          left: 0;
+
           transform: rotate(45deg);
           background: black;
-          top: 100%;
-          margin-top: -55%;
-          left: 0;
-          margin-left: -0;
         }
 
         &:after {
-          content: "";
-          display: block;
-          width: 100%;
           transform: rotate(-45deg);
-          background: black;
-          top: 100%;
-          margin-top: -55%;
-          left: 0;
-          margin-left: 0;
         }
       }
 
@@ -219,20 +200,17 @@ header {
   }
 
   .drop-down-menu {
-    background-color: $c_white;
+    z-index: 0;
     padding: 0 56px 56px;
-
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top: 100%;
     right: 0;
     left: 0;
-    z-index: 0;
 
+    background-color: $c_white;
     transform: translateY(-100%);
-
-    display: flex;
-    justify-content: space-between;
-
     transition: $transition_time;
 
     &.is-active {
@@ -240,8 +218,8 @@ header {
     }
 
     &__content {
-      flex: 1 1;
       display: flex;
+      flex: 1 1;
     }
 
     &__image {
@@ -259,10 +237,9 @@ header {
         align-items: baseline;
 
         font-family: Montserrat, serif;
-        font-style: normal;
+        font-style: 400;
 
         a {
-          color: $c_black;
           display: block;
 
           &:hover {
@@ -272,9 +249,8 @@ header {
 
         &__title {
           margin-bottom: 48px;
-          font-weight: 600;
-          font-size: 1rem;
-          line-height: 1rem;
+
+          @include fontMontserrat(600, 1rem);
         }
 
         &__content {
@@ -283,21 +259,19 @@ header {
 
         &__item {
           margin: 8px 0;
-          font-size: 0.9rem;
-          line-height: 1rem;
+          
+          @include fontMontserrat(400, .9rem, 1rem);
 
           &--bold {
             margin: 12px 0;
-            font-weight: 600;
-            font-size: 1rem;
-            line-height: 1rem;
+
+            @include fontMontserrat(600, 1rem);
 
             &:hover {
               color: $c_accent !important;
             }
           }
         }
-
       }
     }
   }
