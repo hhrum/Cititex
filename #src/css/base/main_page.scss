@@ -21,6 +21,7 @@
 .main-slider-item {
   padding-top: $m_header_top;
   height: 920px;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -34,7 +35,7 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    padding-left: 60px;
+    padding-left: var(--p-section);
 
     > * {
       margin: 24px 0;

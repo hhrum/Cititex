@@ -31,4 +31,15 @@
 // xs
 @media screen and (max-width: 768px) {
 
+  .subscribe-news {
+    text-align: center;
+
+    &__form {
+      flex-direction: column;
+    }
+
+    &__email {
+      margin-bottom: 16px;
+    }
+  }
 }

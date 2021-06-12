@@ -19,6 +19,7 @@
   &__email {
     width: 800px;
     margin-right: 8px;
+    padding: 24px 64px;
     text-align: center;
 
     @include fontMontserrat(500, 1rem);
@@ -38,7 +39,7 @@
 }
 
 .footer {
-  padding: 48px $p_section 32px;
+  padding: 48px var(--p-section) 32px;
 
   font-family: Montserrat, serif;
 
