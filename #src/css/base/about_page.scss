@@ -20,8 +20,16 @@
    }
 
    &__img {
+      min-width: 40%;
       margin-right: 20px;
-      @include imageFit;
+
+      img {
+         @include imageFit;
+      }
+   }
+
+   &__info {
+      height: 100%;
    }
 
    &__title {
@@ -144,7 +152,7 @@
 
       &__item {
          z-index: 1;
-         padding: 0 20px;
+         padding: 0 15px;
 
          cursor: pointer;
          @include fontMontserrat(700, 1.9rem);
@@ -161,7 +169,7 @@
 
          &:hover, &.active {
             color: $c_accent;
-            font-size: 2.2rem;
+            transform: scale(1.1);
          }
       }
    }

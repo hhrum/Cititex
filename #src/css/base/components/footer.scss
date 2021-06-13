@@ -49,6 +49,12 @@
 
   }
 
+  &__logo {
+    img {
+      display: inline;
+    }
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;

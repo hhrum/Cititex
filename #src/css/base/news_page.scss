@@ -48,8 +48,8 @@
 
     &__date {
       position: absolute;
-      bottom: 70px;
       right: 110px;
+      bottom: 70px;
 
       @include fontMontserrat(400, 1rem);
     }
