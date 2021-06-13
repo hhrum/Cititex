@@ -5,43 +5,22 @@
 .cooperation {
   margin-top: $m_header_top;
 
-  @include fontMontserrat(400, 1.6rem, 1.9rem);
+  @include fontMontserrat(400, 1.6rem);
 
   .section-title {
-    @include fontMontserrat(600, 2rem, 2rem);
- }
-}
-
-.intro {
-  height: 666px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-
-  color: $c_white;
-
-  &__img-bg {
-    @include bgImage;
-    filter: brightness(40%);
+    @include fontMontserrat(600, 2rem);
   }
 
-  &__title {
-    @include fontMontserrat(500, 2rem);
-  }
-
-  &__subtitle {
-    padding: 30px 0;
-
-    @include fontMontserrat(300, 1.3rem, 2.2rem);
-  }
-
-  .breadcrumbs {
-    position: absolute;
-    top: 40px; left: 0;
-
-    font-weight: 300;
+  .banner {
+    height: 666px;
+  
+    &__title {
+      @include fontMontserrat(500, 2rem);
+    }
+  
+    &__subtitle {
+      @include fontMontserrat(300, 1.3rem, 2.2rem);
+    }
   }
 }
 
@@ -96,6 +75,7 @@
 
   &__item-text {
     color: $c_gray;
+    transition: .1s;
   }
 
   &__content {

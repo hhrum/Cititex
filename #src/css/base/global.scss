@@ -215,3 +215,35 @@ img {
 
   @include fontMontserrat(400, .7rem);
 }
+
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+
+  color: $c_white;
+
+  &__bg {
+    @include bgImage;
+    filter: brightness(40%);
+  }
+
+  &__title {
+    @include fontMontserrat(500, 2rem);
+  }
+
+  &__subtitle {
+    padding: 30px 0;
+
+    @include fontMontserrat(300, 1.3rem, 2.2rem);
+  }
+
+  .breadcrumbs {
+    position: absolute;
+    top: 40px; left: 0;
+
+    font-weight: 300;
+  }
+}
