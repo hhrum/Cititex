@@ -64,4 +64,55 @@
 // xs
 @media screen and (max-width: 768px) {
 
+  html {
+    --header-size: 100px;
+  }
+
+  .connect-section {
+    &__content {
+      align-items: stretch;
+      text-align: center;
+    }
+
+    &__title,
+    .section-button,
+    &__mobile-images {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      order: 1;
+    }
+
+    &__subtitle {
+      order: 4;
+      margin: 0;
+    }
+
+    .section-button {
+      order: 3;
+    }
+
+    &__mobile-images {
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      >* {
+        width: 100%;
+      }
+
+      .connect-section__image {
+        --image-size: calc((100vw - var(--p-section) * 2 - 4px * 2) / 3);
+        width: var(--image-size);
+        height: var(--image-size);
+        display: block;
+        margin: 0;
+      }
+    }
+
+    &__images {
+      display: none;
+    }
+  }
+
 }

@@ -153,6 +153,10 @@ img {
     }
   }
 
+  &__mobile-images {
+    display: none;
+  }
+
   &__images {
     display: flex;
     flex: 1 1;

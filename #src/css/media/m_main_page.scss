@@ -4,6 +4,11 @@
 @media screen and (max-width: 1200px) {
 
   .about {
+
+    &__info {
+      margin: 0;
+    }
+
     &__advantage {
       flex-direction: column;
       align-items: center;
@@ -89,6 +94,12 @@
       grid-template-columns: 1fr;
       grid-template-rows: repeat(5, 1fr);
       grid-template-areas: "catalog-categories__big1" "catalog-categories__small1" "catalog-categories__small2" "catalog-categories__small3" "catalog-categories__big2";
+    }
+  }
+
+  .popular {
+    .product-swiper {
+      margin-top: 36px;
     }
   }
 }

@@ -15,7 +15,7 @@ header {
   font-family: Montserrat, serif;
 
   .header {
-    z-index: 1;
+    z-index: 2;
     height: var(--header-size);
     padding: 0 var(--p-section);
     position: relative;
@@ -237,9 +237,13 @@ header {
     flex-direction: column;
   }
 
+  .header-mobile {
+    display: none;
+  }
+
   .drop-down-menu {
     z-index: 0;
-    padding: 0 56px 56px;
+    padding: 0 var(--p-section) 56px;
     overflow-y: scroll;
     display: flex;
     justify-content: space-between;
@@ -259,6 +263,10 @@ header {
 
     &.is-active {
       transform: translateY(0);
+    }
+
+    &__mobile-header {
+      display: none;
     }
 
     &__content {

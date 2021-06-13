@@ -5,6 +5,10 @@ let dropDownMenuIsActive = false;
 const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
 const dropDownMenu = document.getElementById('drop-down-menu');
 
+let last_scroll = 0;
+let headerHidden = false;
+const header = document.getElementById('header');
+
 dropDownMenuToggle.onclick = () => {
   dropDownMenuIsActive = !dropDownMenuIsActive;
 
@@ -16,11 +20,24 @@ function toggleDropDownMenu() {
   dropDownMenuToggle.classList.toggle('is-active', dropDownMenuIsActive);
 }
 
+function toggleHeaderHidden() {
+  header.classList.toggle('hide', headerHidden);
+}
+
 window.addEventListener('scroll', function (e) {
   if (dropDownMenuIsActive) {
     dropDownMenuIsActive = false;
     toggleDropDownMenu();
   }
+
+  const current_scroll = window.scrollY;
+
+  if ((last_scroll < current_scroll && !headerHidden) || (last_scroll > current_scroll && headerHidden)) {
+    headerHidden = last_scroll < current_scroll;
+    toggleHeaderHidden();
+  }
+
+  last_scroll = window.scrollY;
 })
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -41,6 +58,7 @@ function initSliders() {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      dynamicBullets: true,
     },
   });
 
@@ -52,6 +70,7 @@ function initSliders() {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      dynamicBullets: true,
     },
 
     breakpoints: {
@@ -90,6 +109,7 @@ function initSliders() {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      dynamicBullets: true,
     },
 
     breakpoints: {

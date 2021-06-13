@@ -42,4 +42,35 @@
       margin-bottom: 16px;
     }
   }
+
+  .footer {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__nav {
+      margin-bottom: 32px;
+
+      .nav {
+        &__title {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen {
+  .footer {
+    &__footer {
+      flex-direction: column;
+      align-items: stretch;
+
+      >* {
+        text-align: center !important;
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
