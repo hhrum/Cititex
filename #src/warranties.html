@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cititex</title>
+
+    @@include('templates/styles.html')
+</head>
+
+<body>
+    @@include('templates/header.html')
+
+    <main class="warranties-page">
+        <div class="breadcrumbs"><a href="/">Главная</a> - Гарантии</div>
+
+        <section class="banner">
+
+            <div class="banner__bg">
+                <img src="img/product_bg_3.png" alt="">
+            </div>
+            <div class="banner__title">Постельное бельё из натуральных тканей!</div>
+            <div class="banner__subtitle">
+                При покупке от 5000 руб. мы предоставляем <br>
+                индивидуальные условия сотрудничества!
+            </div>
+            <a class="section-button no-border" href="#">Купить &#8594;</a>
+        </section>
+
+        <section class="warranties">
+            <div class="section-title">Гарантии</div>
+
+            <div class="warranties__content">
+
+                <div class="warranties__item">
+                    <div class="warranties__img">
+                        <img src="img/warranties/quality-icon.svg" alt="">
+                    </div>
+
+                    <div class="warranties__text-content">
+                        <div class="warranties__title">Гарантия качества</div>
+                        <div class="warranties__text">
+                            Мы на прямую работаем с крупными и широко известными производителями домашнего текстиля, что
+                            исключает
+                            наличие несертифицированного низкокачественного товара в нашем ассортименте. Весь товар
+                            проходит
+                            контроль
+                            качества на производстве. В случае приобретения товара с производственным браком, мы без
+                            проблем
+                            его обменяем на аналогичный или вернём вам его стоимость.
+                        </div>
+                        <div class="warranties__text">
+                            Мы являемся официальным дистрибьютором крупнейшего российского производителя АО ТПК «ДМ
+                            Текстиль».
+                        </div>
+                    </div>
+                </div>
+                <div class="warranties__item">
+                    <div class="warranties__img">
+                        <img src="img/warranties/payments-icon.svg" alt="">
+                    </div>
+
+                    <div class="warranties__text-content">
+                        <div class="warranties__title">Гарантии безопасности платежей</div>
+                        <div class="warranties__text">
+                            Все данные, введенные Вами в платежной форме РФИ Банка, полностью защищены в соответствии с
+                            требованиями
+                            стандарта безопасности PCI DSS. Мы получаем информацию только о совершенном Вами платеже, к
+                            остальным
+                            данным мы не имеем доступа.
+                        </div>
+                    </div>
+                </div>
+                <div class="warranties__item">
+                    <div class="warranties__img">
+                        <img src="img/warranties/delivery-icon.svg" alt="">
+                    </div>
+
+                    <div class="warranties__text-content">
+                        <div class="warranties__title">Гарантия доставки</div>
+                        <div class="warranties__text">
+                            Все данные, введенные Вами в платежной форме РФИ Банка, полностью защищены в соответствии с
+                            требованиями
+                            стандарта безопасности PCI DSS. Мы получаем информацию только о совершенном Вами платеже, к
+                            остальным
+                            данным мы не имеем доступа.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="center-button">
+                <div class="section-button section-button--black">К покупкам &#8594;</div>
+            </div>
+
+        </section>
+
+        <section class="viewed">
+            <div class="section-title viewed__title">
+                Вы смотрели
+            </div>
+
+            <div class="swiper-container product-swiper product-swiper--big">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 1})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 2})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 3})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 4})
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("templates/product.html", {"name": 5})
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    @@include('templates/footer.html')
+    @@include('templates/modals.html')
+
+    @@include('templates/scripts.html')
+</body>
+
+</html>
