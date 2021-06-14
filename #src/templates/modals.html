@@ -1,0 +1,34 @@
+<div class="modals">
+    <div id="modal-login" class="modal modal-login">
+        <div class="modal__header">
+            <div class="modal__title">
+                Войти в личный кабинет
+            </div>
+        </div>
+
+        <div class="modal__content">
+            <div class="modal__input">
+                <label for="login-email">Логин</label>
+                <input
+                        type="email" name="email" id="login-email"
+                        autocomplete="false" placeholder="E-mail">
+            </div>
+            <div class="modal__input">
+                <label for="login-password">Пароль</label>
+                <input
+                        type="password" name="password" id="login-password"
+                        autocomplete="false" placeholder="Пароль">
+            </div>
+
+            <a href="#" class="modal__link">Забыли пароль?</a>
+            <a href="#" class="modal__link">Зарегистрироваться</a>
+        </div>
+
+        <div class="modal__footer">
+            <button class="modal__button section-button">Войти</button>
+        </div>
+    </div>
+
+<!--    BG должен быть всегда ниже модалок-->
+    <div id="modal-bg" class="modals__bg"></div>
+</div>

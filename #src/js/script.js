@@ -1,5 +1,9 @@
 require('@splidejs/splide');
+const {openModal, closeModal} = require('./modules/modals');
 const AOS = require('aos');
+
+[...document.getElementsByClassName('button-login')].forEach(item => item.onclick = openModal);
+document.getElementById('modal-bg').onclick = closeModal;
 
 let last_scroll = 0;
 let headerHidden = false;
