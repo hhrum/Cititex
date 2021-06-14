@@ -2,8 +2,14 @@ require('@splidejs/splide');
 const {openModal, closeModal} = require('./modules/modals');
 const AOS = require('aos');
 
-[...document.getElementsByClassName('button-login')].forEach(item => item.onclick = openModal);
-document.getElementById('modal-bg').onclick = closeModal;
+[...document.getElementsByClassName('button-login')].forEach(item => item.onclick = () => openModal('modal-login'));
+[...document.getElementsByClassName('button-signup')].forEach(item => item.onclick = () => openModal('modal-signup'));
+[...document.getElementsByClassName('button-contact')].forEach(item => item.onclick = () => openModal('modal-contact'));
+const modalCloser = document.getElementById('modal-bg');
+
+if (modalCloser) {
+  modalCloser.onclick = closeModal;
+}
 
 let last_scroll = 0;
 let headerHidden = false;

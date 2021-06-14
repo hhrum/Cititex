@@ -33,6 +33,12 @@ a {
   color: inherit;
 }
 
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
 button {
   border: none;
   background: none;
