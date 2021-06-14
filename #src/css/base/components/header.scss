@@ -40,6 +40,20 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      &:hover {
+        .header__item-text {
+          color: $c_accent;
+        }
+
+        .header__icon {
+          filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
+        }
+      }
+    }
+
+    &__item-text {
+      transition: $transition_time;
     }
 
     &__left {
@@ -74,7 +88,9 @@ header {
     }
 
     &__logo {
-      &.active {
+      transition: .15s;
+
+      &:hover, &.active {
         filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
       }
     }
@@ -90,6 +106,8 @@ header {
     &-icon {
       width: 36px; height: 36px;
       position: relative;
+
+      transition: $transition_time;
 
       img {
         @include imageFit(contain);
@@ -115,6 +133,10 @@ header {
         &:empty {
           display: none;
         }
+      }
+
+      &:hover {
+        filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
       }
     }
 
