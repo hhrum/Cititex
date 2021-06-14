@@ -13,8 +13,6 @@
 }
 
 .review {
-  margin-top: $m_section_top * 0.5;
-
   &__content {
     display: flex;
     justify-content: space-between;
@@ -26,7 +24,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    grid-gap: 20px;
     grid-template-areas:
       "big ."
       "big .";
@@ -49,11 +47,5 @@
     @include fontMontserrat(400, 1.2rem);
     
     border: 1px solid $c_black;
-  }
-
-  &__add {
-    margin-top: $m_section_top * 2;
-    display: flex;
-    justify-content: center;
   }
 }
