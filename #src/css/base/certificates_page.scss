@@ -31,20 +31,27 @@
   margin-top: 50px;
 
   &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
   }
 }
 
 .certificate {
   margin: 50px 0;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   
   &__img {
     margin-bottom: 20px;
-    @include imageFit;
+
+    img {
+      @include imageFit;
+    }
   }
 }
