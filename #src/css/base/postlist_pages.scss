@@ -1,25 +1,32 @@
 @import "../utilities/variables";
 
-// Стили страницы о нас
+// Стили страниц postlists
 
-.news {
+.postlist-page {
   margin-top: $m_header_top;
   @include fontMontserrat(500, 1.8rem);
 
   .section-title {
-    margin-bottom: 50px;
     @include fontMontserrat(600, 2rem);
- }
+  }
 }
 
-.newslist {
+.reviews {
+  &__give-review {
+    display: inline-block;
+    margin: 50px $p_section 0;
+    @include fontMontserrat(500, 1rem);
+  }
+}
+
+.postlist {
   margin-top: 40px;
 
   &__content {
     margin-top: 50px;
   }
 
-  &-item {
+  .post {
     position: relative;
     display: flex;
     align-items: center;
@@ -73,5 +80,24 @@
         transform: scale(1.25);
       }
     }
+  }
+}
+
+.viewed {
+  margin: $m_section_top 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    align-self: start;
+  }
+
+  .product-swiper {
+    margin-top: 80px;
+  }
+
+  .section-button {
+    margin-top: 48px;
   }
 }
