@@ -2,10 +2,13 @@ let modalIsOpen = false;
 let currentModal = null;
 
 function openModal(e) {
+  console.log('open')
   if (currentModal) {
     currentModal.classList.toggle('is-active', false);
   }
-  currentModal = document.getElementById(e);
+
+  currentModal = document.getElementById(e.target.dataset.modal);
+
   modalIsOpen = true;
   modalToggle();
 }

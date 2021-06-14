@@ -40,16 +40,12 @@ body.modal-open {
 
 .modal {
   z-index: 1;
-  width: 420px;
+  min-width: 420px;
   background-color: $c_white;
   padding: var(--p-section);
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: stretch;
-
-  &.is-active {
-    display: flex;
-  }
 
   &__header {
 
@@ -57,10 +53,6 @@ body.modal-open {
 
   &__content {
     margin: 32px 0;
-
-    > *:last-child {
-      margin: 0;
-    }
   }
 
   &__footer {
@@ -70,17 +62,6 @@ body.modal-open {
   &__title {
     text-align: center;
     @include fontRubik(500, 1rem);
-  }
-
-  &__subtitle {
-    width: 100%;
-    margin-top: 16px;
-    text-align: center;
-    @include fontMontserrat(normal, 1rem);
-
-    a {
-      color: #007aff;
-    }
   }
 
   &__input {
@@ -96,18 +77,9 @@ body.modal-open {
     }
 
     input {
-      background-color: #F7F7F7;
       height: 60px;
-      padding: 0 16px;
-      border: none;
+      padding: 8px;
       @include fontMontserrat(normal, 1rem);
-      transition: $transition_time;
-
-      &:focus {
-        background-color: $c_white;
-        border: 1px solid $c_black;
-        border-radius: 0;
-      }
     }
   }
 
@@ -125,16 +97,5 @@ body.modal-open {
 
   &__button {
     margin: auto;
-    padding: 24px 32px;
-  }
-
-  &__personal {
-    margin-top: 24px;
-    text-align: center;
-    @include fontMontserrat(normal, 0.7rem, 1rem);;
-
-    a {
-      color: #007aff;
-    }
   }
 }
