@@ -100,7 +100,7 @@
         </div>
     </div>
 
-    <div class="header-mobile">
+    <div id="header-mobile" class="header-mobile">
         <a class="header__icon" href="#">
             <div class="header-icon">
                 <img src="img/icons/advantages_1.png" alt="">
@@ -111,11 +111,23 @@
                 <img src="img/icons/advantages_1.png" alt="">
             </div>
         </a>
-        <a class="header__icon" href="#">
-            <div class="header-icon">
-                <img src="img/icons/advantages_1.png" alt="">
+
+        <div class="header-mobile__search">
+            <div id="header-mobile-search" class="header-mobile-search">
+                <div class="header-mobile-search__wrapper">
+                    <div id="mobile-search-opener" class="header-icon header-mobile-search__opener">
+                        <img src="img/icons/advantages_1.png" alt="">
+                    </div>
+
+                    <div id="mobile-search-closer" class="header-icon header-mobile-search__closer">
+                        <img src="img/icons/advantages_1.png" alt="">
+                    </div>
+
+                    <input id="mobile-search-input" type="text" class="header-mobile-search__input" placeholder="Искать товар">
+                </div>
             </div>
-        </a>
+        </div>
+
         <a class="header__item" href="#">
             <div class="header__icon">
                 <div class="header-icon">
@@ -137,19 +149,16 @@
     <div id="drop-down-menu" class="drop-down-menu show">
         <div class="drop-down-menu__mobile-header">
             <div class="header-down__child-wrapper">
-
-                <div>
-                    <a class="header-sale" href="#">Распродажа</a>
-                </div>
-            </div>
-            <div class="header-down__child-wrapper">
-
                 <div class="header-connection">
                     <span>8-9627-601-810</span>
                 </div>
             </div>
             <div class="header-down__child-wrapper">
-
+                <div>
+                    <a class="header-sale" href="#">Распродажа</a>
+                </div>
+            </div>
+            <div class="header-down__child-wrapper">
                 <div class="header-connection">
                     <span>8-8442-601-810</span>
                 </div>

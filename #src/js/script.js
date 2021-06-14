@@ -1,18 +1,54 @@
 require('@splidejs/splide');
 const AOS = require('aos');
 
-let dropDownMenuIsActive = false;
-const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
-const dropDownMenu = document.getElementById('drop-down-menu');
-
 let last_scroll = 0;
 let headerHidden = false;
 const header = document.getElementById('header');
 
+let mobileSearchShow = false;
+const mobileHeader = document.getElementById('header-mobile');
+const mobileSearchOpener = document.getElementById('mobile-search-opener');
+const mobileSearchInput = document.getElementById('mobile-search-input');
+const mobileSearchCloser = document.getElementById('mobile-search-closer');
+
+let dropDownMenuIsActive = false;
+const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
+const dropDownMenu = document.getElementById('drop-down-menu');
+
+
+// search
+mobileSearchOpener.onclick = () => {
+  mobileSearchShow = true;
+  mobileSearchToggle();
+  mobileSearchInput.focus();
+}
+
+mobileSearchInput.onblur = () => {
+  if (mobileSearchInput.value.trim() !== '')
+    return;
+
+  mobileSearchShow = false;
+  mobileSearchInput.value = '';
+  mobileSearchToggle();
+}
+
+mobileSearchCloser.onclick = () => {
+  mobileSearchShow = false;
+  mobileSearchInput.value = '';
+  mobileSearchToggle();
+}
+
 dropDownMenuToggle.onclick = () => {
   dropDownMenuIsActive = !dropDownMenuIsActive;
-
   toggleDropDownMenu();
+}
+
+function toggleHeaderHidden() {
+  header.classList.toggle('hide', headerHidden);
+}
+
+function mobileSearchToggle() {
+   mobileHeader.classList.toggle('show-search', mobileSearchShow) // show-search
 }
 
 function toggleDropDownMenu() {
@@ -20,21 +56,18 @@ function toggleDropDownMenu() {
   dropDownMenuToggle.classList.toggle('is-active', dropDownMenuIsActive);
 }
 
-function toggleHeaderHidden() {
-  header.classList.toggle('hide', headerHidden);
-}
-
 window.addEventListener('scroll', function (e) {
-  if (dropDownMenuIsActive) {
-    dropDownMenuIsActive = false;
-    toggleDropDownMenu();
-  }
 
   const current_scroll = window.scrollY;
 
   if ((last_scroll < current_scroll && !headerHidden) || (last_scroll > current_scroll && headerHidden)) {
     headerHidden = last_scroll < current_scroll;
     toggleHeaderHidden();
+  }
+
+  if (dropDownMenuIsActive) {
+    dropDownMenuIsActive = false;
+    toggleDropDownMenu();
   }
 
   last_scroll = window.scrollY;
