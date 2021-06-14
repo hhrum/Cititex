@@ -1,0 +1,50 @@
+@import "../utilities/variables";
+
+// Стили страницы certificates
+
+.certificates-page {
+  margin-top: $m_header_top;
+  @include fontMontserrat(300, 1rem);
+
+  .section-title {
+    @include fontMontserrat(600, 2rem);
+  }
+
+  .banner {
+    height: 550px;
+  
+    &__title {
+      @include fontMontserrat(500, 3.6rem);
+    }
+  
+    &__subtitle {
+      @include fontMontserrat(300, 2rem, 4rem);
+    }
+  }
+
+  .postlist-pagination {
+    margin-top: unset;
+  }
+}
+
+.certificates {
+  margin-top: 50px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.certificate {
+  margin: 50px 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__img {
+    margin-bottom: 20px;
+    @include imageFit;
+  }
+}
