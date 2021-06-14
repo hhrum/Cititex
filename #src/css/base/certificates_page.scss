@@ -31,12 +31,8 @@
   margin-top: 50px;
 
   &__content {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: flex-start;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-
   }
 }
 

@@ -14,7 +14,7 @@
 .reviews {
   &__give-review {
     display: inline-block;
-    margin: 50px $p_section 0;
+    margin: 50px 0 0;
     @include fontMontserrat(500, 1rem);
   }
 }

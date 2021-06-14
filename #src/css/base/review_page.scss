@@ -1,0 +1,59 @@
+@import "../utilities/variables";
+
+// Стили страниц review
+
+.review-page {
+  margin-top: $m_header_top;
+
+  &__go-back {
+    display: inline-block;
+    margin: $m_section_top * 0.5 0;
+    @include fontMontserrat(500, 1rem);
+  }
+}
+
+.review {
+  margin-top: $m_section_top * 0.5;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__images {
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "big ."
+      "big .";
+  }
+
+  &__img {
+    &:first-child {
+      grid-area: big;
+    }
+
+    img {
+      @include imageFit;
+    }
+  }
+
+  &__text {
+    flex: 1 1;
+    padding: 40px 80px;
+
+    @include fontMontserrat(400, 1.2rem);
+    
+    border: 1px solid $c_black;
+  }
+
+  &__add {
+    margin-top: $m_section_top * 2;
+    display: flex;
+    justify-content: center;
+  }
+}
