@@ -1,5 +1,9 @@
 @import "../../utilities/variables";
 
+footer {
+  font-size: 14px;
+}
+
 .subscribe-news {
   margin: $m_section_top 0;
   display: flex;
@@ -22,7 +26,7 @@
     padding: 24px 64px;
     text-align: center;
 
-    @include fontMontserrat(500, 1rem);
+    @include fontMontserrat(500, 1em);
     
     border: 1px solid $c_black;
 
@@ -34,7 +38,7 @@
   &__personal-info {
     margin-top: 40px;
 
-    @include fontMontserrat(400, .8rem, 1rem);
+    @include fontMontserrat(400, .8em, 1em);
   }
 }
 
@@ -89,7 +93,7 @@
         &--bold {
           margin: 12px 0;
 
-          @include fontMontserrat(600, 1rem);
+          @include fontMontserrat(600, 1em);
         }
       }
 
@@ -124,11 +128,11 @@
   }
 
   &__accent-text {
-    @include fontMontserrat(700, 1.2rem);
+    @include fontMontserrat(700, 1.2em);
   }
 
   &__secondary-text {
     color: $c_gray;
-    @include fontMontserrat(500, 0.8rem, 1rem);
+    @include fontMontserrat(500, 0.8em, 1em);
   }
 }
