@@ -1,50 +1,28 @@
 
-@media screen and (max-width: 1680px) {
-  header {
-    .header {
-      height: 80px;
-
-      &__search,
-      &__sale,
-      &__connection {
-        display: none;
-      }
-
-      &__item {
-        &-text {
-          display: none;
-        }
-      }
-    }
-
-    .header-down {
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #fff;
-    }
-  }
-}
-
 @media screen and (max-width: 1200px) {
-
   header {
-
     .header {
-
+      &__item {
+        min-width: 36px;
+      }
     }
 
-
+    .header-search {
+      width: 36px;
+    }
   }
 }
 
 @media screen and (max-width: 992px) {
   header {
-    .drop-down-menu {
+    .header {
+      height: 60px;
+    }
 
-      &__image {
-      }
+    .header-md {
+      z-index: 1;
+      height: 40px;
+      background-color: $c_white;
     }
   }
 }

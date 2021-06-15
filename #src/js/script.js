@@ -15,37 +15,63 @@ let last_scroll = 0;
 let headerHidden = false;
 const header = document.getElementById('header');
 
-let mobileSearchShow = false;
+let searchShow = false;
 const mobileHeader = document.getElementById('header-mobile');
-const mobileSearchOpener = document.getElementById('mobile-search-opener');
-const mobileSearchInput = document.getElementById('mobile-search-input');
-const mobileSearchCloser = document.getElementById('mobile-search-closer');
+const searchWrapper = document.getElementsByClassName('header-search-wrapper');
+const searchOpener = document.getElementsByClassName('header-search-opener');
+const searchInput = document.getElementsByClassName('header-search-input');
+const searchCloser = document.getElementsByClassName('header-search-closer');
 
 let dropDownMenuIsActive = false;
 const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
 const dropDownMenu = document.getElementById('drop-down-menu');
 
+const products = document.getElementsByClassName('product');
+
+[...products].forEach(el => {
+  el.onmouseenter = () => {
+    console.log(el.getBoundingClientRect())
+    console.log(el.offsetLeft , el.offsetWidth)
+  }
+})
 
 // search
-mobileSearchOpener.onclick = () => {
-  mobileSearchShow = true;
-  mobileSearchToggle();
-  mobileSearchInput.focus();
+if(searchOpener.length > 0) {
+  [...searchOpener].forEach(el => {
+    el.onclick = () => {
+      searchShow = true;
+      searchToggle();
+      document.getElementById(el.dataset.focus).focus();
+    }
+  });
 }
 
-mobileSearchInput.onblur = () => {
-  if (mobileSearchInput.value.trim() !== '')
-    return;
+if (searchInput.length > 0) {
+  [...searchInput].forEach(el => {
+    el.onblur = () => {
+      if (el.value.trim() !== '')
+        return;
 
-  mobileSearchShow = false;
-  mobileSearchInput.value = '';
-  mobileSearchToggle();
+      searchShow = false;
+      el.value = '';
+      searchToggle();
+    }
+  })
 }
 
-mobileSearchCloser.onclick = () => {
-  mobileSearchShow = false;
-  mobileSearchInput.value = '';
-  mobileSearchToggle();
+if (searchCloser.length > 0) {
+  [...searchCloser].forEach(el => {
+    el
+      .onclick = () => {
+      searchShow = false;
+
+      [...searchInput].forEach(el => {
+        el.value = '';
+      })
+
+      searchToggle();
+    }
+  })
 }
 
 dropDownMenuToggle.onclick = () => {
@@ -57,8 +83,10 @@ function toggleHeaderHidden() {
   header.classList.toggle('hide', headerHidden);
 }
 
-function mobileSearchToggle() {
-   mobileHeader.classList.toggle('show-search', mobileSearchShow) // show-search
+function searchToggle() {
+  [...searchWrapper].forEach(el => {
+    el.classList.toggle('is-active', searchShow) // show-search
+  })
 }
 
 function toggleDropDownMenu() {

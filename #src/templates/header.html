@@ -1,153 +1,194 @@
 <header id="header">
 
     <div class="header">
-
-        <div class="header__left">
-            <div id="drop-down-menu-toggle" class="header__menu-open"></div>
-            <a class="header__icon header-phone button-contact" href="#">
-                <div class="header-icon">
-                    <img src="img/icons/phone.png" alt="">
-                </div>
-            </a>
-            <a class="header__icon header-map" href="#">
-                <div class="header-icon">
-                    <img src="img/icons/region.png" alt="">
-                </div>
-            </a>
-            <div class="header__search">
-                <div class="header-search">
-                    <input class="header-search__input" type="text" placeholder="Искать товары">
-                    <button class="header-search__icon">
-                        <div class="header-search-icon">
-                            <img src="img/icons/search.png" alt="">
+        <div class="container h-100">
+            <div class="row w-100 h-100 d-flex align-items-center">
+                <div class="col-4">
+                    <div class="d-flex align-items-center w-100 header-search-wrapper">
+                        <div class="header__item me-2">
+                            <div id="drop-down-menu-toggle" class="header__menu-open"></div>
                         </div>
-                    </button>
+
+                        <div class="header__item mx-2">
+                            <a href="#" class="header-item header-phone">
+                                <span class="header__icon">
+                                    <img src="img/icons/phone.png">
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="header__item mx-2">
+                            <a href="#" class="header-item header-map">
+                                <span class="header__icon">
+                                    <img src="img/icons/region.png">
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="header__item header__search mx-2 d-none d-lg-block">
+                            <div class="header-item header-search">
+                                <button data-focus="header-search-input" class="header-search__icon header__icon header-search-opener">
+                                    <div class="header-search-icon">
+                                        <img src="img/icons/search.png" alt="">
+                                    </div>
+                                </button>
+                                <input id="header-search-input" class="header-search__input header-search-input" type="text" placeholder="Искать товары">
+                            </div>
+                        </div>
+
+                        <div class="header__item d-none d-lg-block">
+                            <a href="#" class="header-item header__sale">
+                                Распродажа
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="header__sale">
-                <a class="header-sale" href="#">Распродажа</a>
+                <div class="col-4">
+                    <a href="/">
+                        <img class="header__logo" src="img/cititex-logos/header_logo.png">
+                    </a>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end w-100">
+                        <div class="header__item mx-2">
+                            <a href="#" class="header-item">
+                                <span class="header__icon">
+                                    <img src="img/icons/favorites.svg">
+                                </span>
+
+                                <span class="header-item__title d-none d-lg-block">
+                                    Избранное
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="header__item mx-2">
+                            <a href="#" class="header-item">
+                                <span class="header__icon">
+                                    <img src="img/icons/basket.svg">
+                                </span>
+
+                                <span class="header-item__title d-none d-lg-block">
+                                    Корзина
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="header__item ms-2">
+                            <a href="#" class="header-item">
+                                <span class="header__icon">
+                                    <img src="img/icons/private.svg">
+                                </span>
+
+                                <span class="header-item__title d-none d-lg-block">
+                                    Вход
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="header__center">
-            <a href="/">
-                <img class="header__logo" src="img/cititex-logos/header_logo.png">
-            </a>
-        </div>
-        <div class="header__right">
-            <div class="header__connection">
-                <div class="header-connection">
-                    <span>8-9627-601-810</span>
-                    <span>8-8442-601-810</span>
+    </div>
+    <div class="header header-md d-block d-lg-none">
+        <div class="container h-100">
+            <div class="row w-100 h-100 d-flex align-items-center">
+                <div class="col-4">
+                    <div class="header__item">
+                        <a href="#" class="header-item header__sale">
+                            Распродажа
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 header-search-wrapper">
+                    <div class="header__item header__search d-flex justify-content-center mx-2 ">
+                        <div class="header-item header-search">
+                            <button data-focus="header-md-search-input" class="header-search__icon header__icon header-search-opener">
+                                <div class="header-search-icon">
+                                    <img src="img/icons/search.png" alt="">
+                                </div>
+                            </button>
+                            <input id="header-md-search-input" class="header-search__input header-search-input" type="text" placeholder="Искать товары">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+
                 </div>
             </div>
-            <a class="header__item header-favorite" href="#">
-                <div class="header__icon">
-                    <div class="header-icon">
-                        <img src="img/icons/favorites.svg" alt="">
-                        <div class="header-icon__badge">10</div>
-                    </div>
-                </div>
-                <div class="header__item-text">Избранное</div>
-            </a>
-            <a class="header__item header-card" href="#">
-                <div class="header__icon">
-                    <div class="header-icon">
-                        <img src="img/icons/basket.svg" alt="">
-                        <div class="header-icon__badge">10</div>
-                    </div>
-                </div>
-                <div class="header__item-text">Корзина</div>
-            </a>
-            <a class="header__item button-login" href="#" data-modal="modal-login">
-                <div class="header__icon">
-                    <div class="header-icon">
-                        <img src="img/icons/private.svg" alt="">
-                    </div>
-                </div>
-                <div class="header__item-text">Вход</div>
-            </a>
         </div>
     </div>
 
-    <div class="header-down">
-        <div class="header-down__child-wrapper">
-            <div class="header-search">
-                <input class="header-search__input" type="text" placeholder="Искать товары">
-                <button class="header-search__icon">
-                    <div class="header-search-icon">
-                        <img src="img/icons/search.png" alt="">
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div class="header-down__child-wrapper">
+    <!--    <div class="header">-->
 
-            <div>
-                <a class="header-sale" href="#">Распродажа</a>
-            </div>
-        </div>
-        <div class="header-down__child-wrapper">
+    <!--        <div class="header__left">-->
+    <!--            <div id="drop-down-menu-toggle" class="header__menu-open"></div>-->
+    <!--            <a class="header__icon header-phone button-contact" href="#">-->
+    <!--                <div class="header-icon">-->
+    <!--                    <img src="img/icons/phone.png" alt="">-->
+    <!--                </div>-->
+    <!--            </a>-->
+    <!--            <a class="header__icon header-map" href="#">-->
+    <!--                <div class="header-icon">-->
+    <!--                    <img src="img/icons/region.png" alt="">-->
+    <!--                </div>-->
+    <!--            </a>-->
+    <!--            <div class="header__search">-->
+    <!--                <div class="header-search">-->
+    <!--                    <input class="header-search__input" type="text" placeholder="Искать товары">-->
+    <!--                    <button class="header-search__icon">-->
+    <!--                        <div class="header-search-icon">-->
+    <!--                            <img src="img/icons/search.png" alt="">-->
+    <!--                        </div>-->
+    <!--                    </button>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="header__sale">-->
+    <!--                <a class="header-sale" href="#">Распродажа</a>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="header__center">-->
+    <!--            <a href="/">-->
+    <!--                <img class="header__logo" src="img/cititex-logos/header_logo.png">-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <div class="header__right">-->
+    <!--            <div class="header__connection">-->
+    <!--                <div class="header-connection">-->
+    <!--                    <span>8-9627-601-810</span>-->
+    <!--                    <span>8-8442-601-810</span>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <a class="header__item header-favorite" href="#">-->
+    <!--                <div class="header__icon">-->
+    <!--                    <div class="header-icon">-->
+    <!--                        <img src="img/icons/favorites.svg" alt="">-->
+    <!--                        <div class="header-icon__badge">10</div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="header__item-text">Избранное</div>-->
+    <!--            </a>-->
+    <!--            <a class="header__item header-card" href="#">-->
+    <!--                <div class="header__icon">-->
+    <!--                    <div class="header-icon">-->
+    <!--                        <img src="img/icons/basket.svg" alt="">-->
+    <!--                        <div class="header-icon__badge">10</div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="header__item-text">Корзина</div>-->
+    <!--            </a>-->
+    <!--            <a class="header__item button-login" href="#" data-modal="modal-login">-->
+    <!--                <div class="header__icon">-->
+    <!--                    <div class="header-icon">-->
+    <!--                        <img src="img/icons/private.svg" alt="">-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="header__item-text">Вход</div>-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
-            <div class="header-connection">
-                <span>8-9627-601-810</span>
-            </div>
-        </div>
-        <div class="header-down__child-wrapper">
-
-            <div class="header-connection">
-                <span>8-8442-601-810</span>
-            </div>
-        </div>
-    </div>
-
-    <div id="header-mobile" class="header-mobile">
-        <a class="header__icon button-contact" href="#">
-            <div class="header-icon">
-                <img src="img/icons/phone.png" alt="">
-            </div>
-        </a>
-        <a class="header__icon" href="#">
-            <div class="header-icon">
-                <img src="img/icons/region.png" alt="">
-            </div>
-        </a>
-
-        <div class="header-mobile__search">
-            <div id="header-mobile-search" class="header-mobile-search">
-                <div class="header-mobile-search__wrapper">
-                    <div id="mobile-search-opener" class="header-icon header-mobile-search__opener">
-                        <img src="img/icons/search.png" alt="">
-                    </div>
-
-                    <div id="mobile-search-closer" class="header-icon header-mobile-search__closer">
-                        <img src="img/icons/search.png" alt="">
-                    </div>
-
-                    <input id="mobile-search-input" type="text" class="header-mobile-search__input"
-                        placeholder="Искать товар">
-                </div>
-            </div>
-        </div>
-
-        <a class="header__item" href="#">
-            <div class="header__icon">
-                <div class="header-icon">
-                    <img src="img/icons/favorites.svg" alt="">
-                    <div class="header-icon__badge">10</div>
-                </div>
-            </div>
-        </a>
-        <a class="header__item" href="#">
-            <div class="header__icon">
-                <div class="header-icon">
-                    <img src="img/icons/basket.svg" alt="">
-                    <div class="header-icon__badge">10</div>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div id="drop-down-menu" class="drop-down-menu show">
+    <div id="drop-down-menu" class="drop-down-menu show pb-4">
         <div class="drop-down-menu__mobile-header">
             <div class="header-down__child-wrapper">
                 <div class="header-connection">
@@ -165,56 +206,60 @@
                 </div>
             </div>
         </div>
-        <div class="drop-down-menu__content">
-            <div class="drop-down-menu__nav">
-                <div class="nav">
-                    <a href="#" class="nav__item nav__item--bold">Постельное белье</a>
-                    <a href="#" class="nav__item nav__item--bold">Махровые изделия</a>
-                    <a href="#" class="nav__item nav__item--bold">Пледы и покрывала</a>
-                    <a href="#" class="nav__item nav__item--bold">Подушки и одеяла</a>
-                    <a href="#" class="nav__item nav__item--bold">Матрасы и наматрасники</a>
-                    <a href="#" class="nav__item nav__item--bold">Кухня и столовая</a>
-                    <a href="#" class="nav__item nav__item--bold">Коврики и ковры</a>
-                    <a href="#" class="nav__item nav__item--bold">Для дома и сна</a>
-                    <a href="#" class="nav__item nav__item--bold">Подарки</a>
-                    <a href="#" class="nav__item nav__item--bold">Тестиль для бизнеса</a>
-                    <a href="#" class="nav__item nav__item--bold">Товары для детей</a>
-                    <a href="#" class="nav__item nav__item--bold">Прочее</a>
-                    <a href="#" class="nav__item nav__item--bold">Тестиль для бизнеса</a>
-                    <a href="#" class="nav__item nav__item--bold">Товары для детей</a>
-                    <a href="#" class="nav__item nav__item--bold">Прочее</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-2 drop-down-menu__nav">
+                    <div class="nav">
+                        <a href="#" class="nav__item nav__item--bold">Постельное белье</a>
+                        <a href="#" class="nav__item nav__item--bold">Махровые изделия</a>
+                        <a href="#" class="nav__item nav__item--bold">Пледы и покрывала</a>
+                        <a href="#" class="nav__item nav__item--bold">Подушки и одеяла</a>
+                        <a href="#" class="nav__item nav__item--bold">Матрасы и наматрасники</a>
+                        <a href="#" class="nav__item nav__item--bold">Кухня и столовая</a>
+                        <a href="#" class="nav__item nav__item--bold">Коврики и ковры</a>
+                        <a href="#" class="nav__item nav__item--bold">Для дома и сна</a>
+                        <a href="#" class="nav__item nav__item--bold">Подарки</a>
+                        <a href="#" class="nav__item nav__item--bold">Тестиль для бизнеса</a>
+                        <a href="#" class="nav__item nav__item--bold">Товары для детей</a>
+                        <a href="#" class="nav__item nav__item--bold">Прочее</a>
+                        <a href="#" class="nav__item nav__item--bold">Тестиль для бизнеса</a>
+                        <a href="#" class="nav__item nav__item--bold">Товары для детей</a>
+                        <a href="#" class="nav__item nav__item--bold">Прочее</a>
+                    </div>
+                </div>
+                <div class="col-2 drop-down-menu__nav">
+                    <div class="nav">
+                        <a href="#" class="nav__item nav__item--bold">Категория</a>
+                        <a href="#" class="nav__item">Постельное бельё</a>
+                        <a href="#" class="nav__item">Пододеяльники</a>
+                        <a href="#" class="nav__item">Простыни</a>
+                        <a href="#" class="nav__item">Наволочки</a>
+                    </div>
+                </div>
+                <div class="col-2 drop-down-menu__nav">
+                    <div class="nav">
+                        <a href="#" class="nav__item nav__item--bold">Состав</a>
+                        <a href="#" class="nav__item">100% хлопок</a>
+                        <a href="#" class="nav__item">50% хлопок, 50 % П/Э</a>
+                    </div>
+                </div>
+                <div class="col-2 drop-down-menu__nav">
+                    <div class="nav">
+                        <a href="#" class="nav__item nav__item--bold">Ткань</a>
+                        <a href="#" class="nav__item">Сатин</a>
+                        <a href="#" class="nav__item">Поплин</a>
+                        <a href="#" class="nav__item">Мако-сатин</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="drop-down-menu__image-wrapper">
+                        <div class="drop-down-menu__image">
+                            <img src="img/drop_down_menu.png">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="drop-down-menu__nav">
-                <div class="nav">
-                    <a href="#" class="nav__item nav__item--bold">Категория</a>
-                    <a href="#" class="nav__item">Постельное бельё</a>
-                    <a href="#" class="nav__item">Пододеяльники</a>
-                    <a href="#" class="nav__item">Простыни</a>
-                    <a href="#" class="nav__item">Наволочки</a>
-                </div>
-            </div>
-            <div class="drop-down-menu__nav">
-                <div class="nav">
-                    <a href="#" class="nav__item nav__item--bold">Состав</a>
-                    <a href="#" class="nav__item">100% хлопок</a>
-                    <a href="#" class="nav__item">50% хлопок, 50 % П/Э</a>
-                </div>
-            </div>
-            <div class="drop-down-menu__nav">
-                <div class="nav">
-                    <a href="#" class="nav__item nav__item--bold">Ткань</a>
-                    <a href="#" class="nav__item">Сатин</a>
-                    <a href="#" class="nav__item">Поплин</a>
-                    <a href="#" class="nav__item">Мако-сатин</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="drop-down-menu__image-wrapper">
-            <div class="drop-down-menu__image">
-                <img src="img/drop_down_menu.png">
-            </div>
         </div>
     </div>
 </header>

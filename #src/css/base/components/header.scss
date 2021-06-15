@@ -15,134 +15,67 @@ header {
   font-family: Montserrat, serif;
 
   .header {
+    width: 100%;
     z-index: 2;
-    height: var(--header-size);
-    padding: 0 var(--p-section);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    height: 80px;
     background-color: $c_white;
 
-    > * {
-      display: flex;
-      align-items: center;
-    }
-
-    &__left,
-    &__right {
-      flex: 1 1 50vw;
-      overflow: hidden;
-    }
-
     &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      min-width: 46px;
+      height: 100%;
 
-      &:hover {
-        .header__item-text {
+      .header-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
           color: $c_accent;
+          .header__icon {
+            img {
+              filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
+            }
+          }
         }
 
-        .header__icon {
-          filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
+        &__title {
+          margin-top: 4px;
+          @include fontMontserrat(400, 0.9rem)
         }
       }
     }
 
-    &__item-text {
-      transition: $transition_time;
-    }
-
-    &__left {
-      //justify-content: space-between;
-
-      > * {
-        margin-right: 32px;
+    &__icon {
+      display: block;
+      width: 36px;
+      height: 36px;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        object-fit: contain;
+        object-position: center center;
       }
     }
 
     &__search {
-      width: 100%;
-
-      .header-search {
-        &__input {
-          width: 100%;
-        }
-      }
-    }
-
-    &__input {
-      padding-left: 65px;
-      flex: 1 1;
-
-      &:hover {
-        border: 1px solid $c_black;
-      }
-    }
-
-    &__center {
-      margin: 0 56px;
+      transition: $transition_time;
     }
 
     &__logo {
-      transition: .15s;
-
-      &:hover, &.active {
-        filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
-      }
-    }
-
-    &__right {
-      justify-content: flex-end;
-
-      > * {
-        margin-left: 32px;
-      }
-    }
-
-    &-icon {
-      width: 36px; height: 36px;
-      position: relative;
-
-      transition: $transition_time;
-
-      img {
-        @include imageFit(contain);
-      }
-
-      &__badge {
-        z-index: 1;
-        height: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        right: -10px;
-        width: 22px;
-
-        font-size: .8rem;
-
-        background-color: $c_white;
-        border: 1px solid $c_black;
-        border-radius: 100%;
-
-        &:empty {
-          display: none;
-        }
-      }
-
-      &:hover {
-        filter: contrast(50%) sepia(100%) hue-rotate(312deg) brightness(1.2) saturate(500%);
-      }
+      padding: 8px;
+      margin: auto;
     }
 
     // Стили для кноки, открывающей меню
     &__menu-open {
-      min-width: 40px; height: 36px;
+      width: 36px;
+      min-width: 36px;
+      height: 32px;
       box-sizing: border-box;
       position: relative;
       overflow: hidden;
@@ -213,36 +146,101 @@ header {
     }
   }
 
-  .header-search {
-    height: 35px;
+  .header-search-wrapper {
     position: relative;
+
+    > * {
+      transition: $transition_time;
+    }
+
+    &.is-active {
+      > * {
+        opacity: 0;
+      }
+
+      .header__search {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        align-items: flex-start;
+      }
+
+      .header-search {
+        width: 100%;
+        align-items: start;
+
+        &__input {
+          left: 0;
+          cursor: text;
+        }
+      }
+    }
+  }
+
+  .header-search {
+    width: 46px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
 
+    transition: $transition_time;
 
-    &__input {
-      padding-left: 48px;
+    * {
+      cursor: pointer;
     }
 
     &__icon {
-      width: 28px;
-      height: 28px;
-      position: absolute;
-      left: 4px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    &-icon {
-      @include bgImage(contain);
       z-index: 1;
     }
 
-    &.active + .header__sale {
-      width: 0;
-      overflow-x: hidden;
+    &__input {
+      width: 100%;
+      height: 36px;
+      position: absolute;
+      top: 50%;
+      left: 46px;
+      transform: translateY(-50%);
+      padding-left: 56px;
+
+      transition: $transition_time;
     }
   }
+
+  //.header-search {
+  //  height: 35px;
+  //  position: relative;
+  //  display: flex;
+  //  justify-content: space-between;
+  //
+  //
+  //  &__input {
+  //    padding-left: 48px;
+  //  }
+  //
+  //  &__icon {
+  //    width: 28px;
+  //    height: 28px;
+  //    position: absolute;
+  //    left: 4px;
+  //    top: 50%;
+  //    transform: translateY(-50%);
+  //  }
+  //
+  //  &-icon {
+  //    @include bgImage(contain);
+  //    z-index: 1;
+  //  }
+  //
+  //  &.active + .header__sale {
+  //    width: 0;
+  //    overflow-x: hidden;
+  //  }
+  //}
 
   .header-sale {
     font-weight: 600;
@@ -265,7 +263,7 @@ header {
 
   .drop-down-menu {
     z-index: 0;
-    padding: 0 var(--p-section) 56px;
+    //padding: 0 var(--p-section) 56px;
     overflow-y: scroll;
     display: flex;
     justify-content: space-between;
@@ -276,6 +274,8 @@ header {
     max-height: calc(100vh - var(--header-size));
 
     background-color: $c_white;
+
+    font-size: 14px;
     transform: translateY(-100%);
     transition: $transition_time;
 
@@ -297,7 +297,7 @@ header {
     }
 
     &__image-wrapper {
-      flex: 1 1;
+      height: 100%;
       position: relative;
     }
 
@@ -310,8 +310,6 @@ header {
     }
 
     &__nav {
-      margin-right: 56px;
-
       .nav {
         display: flex;
         flex-direction: column;
@@ -331,7 +329,7 @@ header {
         &__title {
           margin-bottom: 48px;
 
-          @include fontMontserrat(600, 1rem);
+          @include fontMontserrat(600, 1em);
         }
 
         &__content {
@@ -340,13 +338,13 @@ header {
 
         &__item {
           margin: 8px 0;
-          
-          @include fontMontserrat(400, .9rem, 1rem);
+
+          @include fontMontserrat(400, .9em, 1em);
 
           &--bold {
             margin: 12px 0;
 
-            @include fontMontserrat(600, 1rem);
+            @include fontMontserrat(600, 1em);
 
             &:hover {
               color: $c_accent !important;
