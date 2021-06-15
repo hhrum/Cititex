@@ -1,0 +1,80 @@
+@import "../utilities/variables";
+
+// Стили страницы informational
+
+.informational-page {
+  margin-top: $m_header_top;
+
+  @include fontRubik(400, 1.7rem);
+
+  .banner {
+    height: 550px;
+  
+    &__title {
+      @include fontMontserrat(500, 3.6rem);
+    }
+  }
+}
+
+.informational {
+  margin-top: $m_section_top;
+
+  &__nav {
+    margin: $m_section_top * 0.5 0;
+    display: flex;
+
+    &-item {
+      margin-right: 100px;
+
+      font-weight: 300;
+      cursor: pointer;
+
+      transition: $transition_time;
+
+      &.active {
+        @include fontRubik(500, 2rem);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: $m_section_top * 0.5;
+  }
+
+  &__block {
+    &:not(:first-child) {
+      margin-top: $m_section_top;
+    }
+  }
+
+  &-item {
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid $c_black;
+
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    
+    &__title {
+      @include fontRubik(500, 2rem);
+    }
+
+    &__hide {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    &__text {
+      margin-top: 20px;
+      
+      @include fontMontserrat(400, 1.7rem, 2rem);
+
+      a {
+        color: $c_blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
