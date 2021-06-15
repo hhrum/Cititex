@@ -17,26 +17,6 @@
     &__content {
       flex: 1 1;
     }
-
-    &__images {
-      margin: 0 -16px;
-      flex: 0 1;
-      display: grid;
-      grid-template-areas:
-              "big big"
-              ". .";
-    }
-
-    &__image {
-      width: 200px;
-      height: 200px;
-      margin: 16px;
-
-      &:first-child {
-        width: auto;
-        grid-column: big;
-      }
-    }
   }
 
 }
@@ -45,19 +25,6 @@
 @media screen and (max-width: 992px) {
   html {
     --p-section: 32px;
-  }
-
-  .connect-section {
-    &__image {
-      &:first-child {
-        width: 200px;
-        height: 200px;
-      }
-
-      &:not(:first-child) {
-        display: none;
-      }
-    }
   }
 }
 
@@ -84,6 +51,10 @@
       order: 1;
     }
 
+    &__mobile-images {
+      order: 2;
+    }
+
     &__subtitle {
       order: 4;
       margin: 0;
@@ -91,27 +62,6 @@
 
     .section-button {
       order: 3;
-    }
-
-    &__mobile-images {
-      order: 2;
-      display: flex;
-      justify-content: space-between;
-      >* {
-        width: 100%;
-      }
-
-      .connect-section__image {
-        --image-size: calc((100vw - var(--p-section) * 2 - 4px * 2) / 3);
-        width: var(--image-size);
-        height: var(--image-size);
-        display: block;
-        margin: 0;
-      }
-    }
-
-    &__images {
-      display: none;
     }
   }
 

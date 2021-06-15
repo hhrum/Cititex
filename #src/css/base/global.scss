@@ -49,8 +49,6 @@ img {
   display: block;
 }
 
-
-
 .section-title {
   color: $c_black;
   @include fontRubik(500, 2rem, 2rem);
@@ -62,7 +60,7 @@ img {
 
 .section-button {
   display: block;
-  padding: 24px 64px;
+  padding: 24px var(--p-section);
 
   @include fontMontserrat(500, 1.2rem, 1.2rem);
   color: $c_black;
@@ -134,6 +132,22 @@ img {
   background-color: $c_black;
 }
 
+.square-image {
+  width: 100%;
+  padding-top: 100%;
+  background-color: black;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .connect-section {
   margin-top: $m_section_top;
   display: flex;
@@ -169,22 +183,23 @@ img {
   }
 
   &__mobile-images {
-    display: none;
+    width: 100%;
+    display: flex;
+
+    &>* {
+      flex: 1 1;
+    }
   }
+
+
 
   &__images {
     display: flex;
     flex: 1 1;
-    margin: 32px -26px;
   }
 
   &__image {
-    width: 260px; height: 260px;
-    margin: 0 26px;
-
-    img {
-      @include imageFit;
-    }
+    width: 100%;
   }
 
   &__register {
