@@ -94,6 +94,12 @@ img {
   }
 }
 
+.center-button {
+  margin-top: $m_section_top * 2;
+  display: flex;
+  justify-content: center;
+}
+
 .product-swiper {
   width: 100%;
   align-self: stretch;
@@ -220,6 +226,7 @@ img {
 .breadcrumbs {
   z-index: 1;
   padding: 10px $p_section 0;
+  margin-bottom: 50px;
 
   @include fontMontserrat(400, .7rem);
 }

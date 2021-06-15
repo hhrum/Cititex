@@ -1,0 +1,29 @@
+@import "../utilities/variables";
+
+// Стили страницы discounts
+
+.discounts-page {
+  margin-top: $m_header_top;
+
+  .banner {
+    height: 550px;
+  
+    &__title {
+      @include fontMontserrat(500, 3.6rem);
+    }
+  
+    &__subtitle {
+      @include fontMontserrat(300, 2rem, 4rem);
+    }
+  }
+}
+
+.discounts {
+  margin-top: $m_section_top;
+
+  &__text {
+    margin-top: $m_section_top * 0.5;
+
+    @include fontMontserrat(300, 1.2rem, 1.5rem);
+  }
+}
