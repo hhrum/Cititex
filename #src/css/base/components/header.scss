@@ -22,7 +22,6 @@ header {
 
     &__item {
       min-width: 46px;
-      height: 100%;
 
       .header-item {
         display: flex;
@@ -64,6 +63,10 @@ header {
 
     &__search {
       transition: $transition_time;
+    }
+
+    &__sale {
+      @include fontMontserrat(600, 1rem);
     }
 
     &__logo {
@@ -210,37 +213,6 @@ header {
       transition: $transition_time;
     }
   }
-
-  //.header-search {
-  //  height: 35px;
-  //  position: relative;
-  //  display: flex;
-  //  justify-content: space-between;
-  //
-  //
-  //  &__input {
-  //    padding-left: 48px;
-  //  }
-  //
-  //  &__icon {
-  //    width: 28px;
-  //    height: 28px;
-  //    position: absolute;
-  //    left: 4px;
-  //    top: 50%;
-  //    transform: translateY(-50%);
-  //  }
-  //
-  //  &-icon {
-  //    @include bgImage(contain);
-  //    z-index: 1;
-  //  }
-  //
-  //  &.active + .header__sale {
-  //    width: 0;
-  //    overflow-x: hidden;
-  //  }
-  //}
 
   .header-sale {
     font-weight: 600;

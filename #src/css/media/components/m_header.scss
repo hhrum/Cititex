@@ -19,10 +19,12 @@
       height: 60px;
     }
 
-    .header-md {
+    .header-mobile {
       z-index: 1;
-      height: 40px;
       background-color: $c_white;
+      height: 40px;
+
+      // размер иконок изменить
     }
   }
 }

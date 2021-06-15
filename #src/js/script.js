@@ -26,21 +26,12 @@ let dropDownMenuIsActive = false;
 const dropDownMenuToggle = document.getElementById('drop-down-menu-toggle');
 const dropDownMenu = document.getElementById('drop-down-menu');
 
-const products = document.getElementsByClassName('product');
-
-[...products].forEach(el => {
-  el.onmouseenter = () => {
-    console.log(el.getBoundingClientRect())
-    console.log(el.offsetLeft , el.offsetWidth)
-  }
-})
-
 // search
-if(searchOpener.length > 0) {
+if (searchOpener.length > 0) {
   [...searchOpener].forEach(el => {
     el.onclick = () => {
       searchShow = true;
-      searchToggle();
+      searchToggle(el.dataset.wrapper);
       document.getElementById(el.dataset.focus).focus();
     }
   });
@@ -83,10 +74,20 @@ function toggleHeaderHidden() {
   header.classList.toggle('hide', headerHidden);
 }
 
-function searchToggle() {
-  [...searchWrapper].forEach(el => {
-    el.classList.toggle('is-active', searchShow) // show-search
-  })
+function searchToggle(wrapper) {
+
+  if (!searchShow) {
+    [...searchWrapper].forEach(el => {
+      el.classList.toggle('is-active', searchShow) // show-search
+    })
+
+    return null;
+  }
+
+  const _searchWrapper = document.getElementById(wrapper);
+  if (_searchWrapper) {
+    _searchWrapper.classList.toggle('is-active', searchShow)
+  }
 }
 
 function toggleDropDownMenu() {

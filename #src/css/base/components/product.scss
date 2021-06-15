@@ -3,9 +3,6 @@
 // Товар
 
 .product-swiper {
-  box-sizing: content-box;
-  margin: -16px;
-  padding: 16px;
 }
 
 .product {
@@ -74,9 +71,10 @@
 
   &__name {
     margin: 24px 0 16px;
-    height: 2rem;
+    height: 2.4rem;
+    overflow-y: hidden;
 
-    @include fontMontserrat(400, 1rem);
+    @include fontMontserrat(400, 1.2rem);
   }
 
   &__price {
@@ -98,6 +96,21 @@
   &__cart {
     @include fontMontserrat(500, 1.1rem);
     cursor: pointer;
+
+    &:hover {
+      color: $c_accent;
+    }
+  }
+
+  &__size {
+    margin: 24px 0;
+    @include fontMontserrat(400, 1rem);
+
+    select {
+      background: none;
+      border: none;
+      outline: none;
+    }
   }
 
   &__hover {
@@ -136,6 +149,10 @@
         flex: 1 1;
         display: flex;
         flex-direction: column;
+      }
+
+      &__footer {
+
       }
 
       .product__footer {

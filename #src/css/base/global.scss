@@ -101,8 +101,10 @@ img {
 
 .product-swiper {
   width: 100%;
+  box-sizing: content-box;
+  margin: -16px;
+  padding: 16px 16px 80px;
   align-self: stretch;
-  padding-bottom: 80px;
 
   .swiper-wrapper {
     //margin: 0 -16px;

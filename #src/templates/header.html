@@ -3,13 +3,13 @@
     <div class="header">
         <div class="container h-100">
             <div class="row w-100 h-100 d-flex align-items-center">
-                <div class="col-4">
-                    <div class="d-flex align-items-center w-100 header-search-wrapper">
+                <div class="col-2 col-md-4 h-100">
+                    <div id="header-search-wrapper" class="h-100 d-flex align-items-center w-100 header-search-wrapper">
                         <div class="header__item me-2">
                             <div id="drop-down-menu-toggle" class="header__menu-open"></div>
                         </div>
 
-                        <div class="header__item mx-2">
+                        <div class="header__item mx-2 d-none d-lg-block">
                             <a href="#" class="header-item header-phone">
                                 <span class="header__icon">
                                     <img src="img/icons/phone.png">
@@ -17,7 +17,7 @@
                             </a>
                         </div>
 
-                        <div class="header__item mx-2">
+                        <div class="header__item mx-2 d-none d-lg-block">
                             <a href="#" class="header-item header-map">
                                 <span class="header__icon">
                                     <img src="img/icons/region.png">
@@ -27,31 +27,37 @@
 
                         <div class="header__item header__search mx-2 d-none d-lg-block">
                             <div class="header-item header-search">
-                                <button data-focus="header-search-input" class="header-search__icon header__icon header-search-opener">
+
+                                <button
+                                        data-focus="header-search-input"
+                                        data-wrapper="header-search-wrapper"
+                                        class="header-search__icon header__icon header-search-opener">
                                     <div class="header-search-icon">
                                         <img src="img/icons/search.png" alt="">
                                     </div>
                                 </button>
-                                <input id="header-search-input" class="header-search__input header-search-input" type="text" placeholder="Искать товары">
+
+                                <input id="header-search-input" class="header-search__input header-search-input"
+                                       type="search" placeholder="Искать товары">
                             </div>
                         </div>
 
-                        <div class="header__item d-none d-lg-block">
+                        <div class="header__item ms-2 d-none d-md-block">
                             <a href="#" class="header-item header__sale">
                                 Распродажа
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-8 col-md-4">
                     <a href="/">
                         <img class="header__logo" src="img/cititex-logos/header_logo.png">
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="col-2 col-md-4">
                     <div class="d-flex align-items-center justify-content-end w-100">
                         <div class="header__item mx-2">
-                            <a href="#" class="header-item">
+                            <a href="#" class="header-item d-none d-lg-block">
                                 <span class="header__icon">
                                     <img src="img/icons/favorites.svg">
                                 </span>
@@ -63,7 +69,7 @@
                         </div>
 
                         <div class="header__item mx-2">
-                            <a href="#" class="header-item">
+                            <a href="#" class="header-item d-none d-lg-block">
                                 <span class="header__icon">
                                     <img src="img/icons/basket.svg">
                                 </span>
@@ -90,103 +96,68 @@
             </div>
         </div>
     </div>
-    <div class="header header-md d-block d-lg-none">
+
+    <div class="header-mobile d-block d-lg-none">
         <div class="container h-100">
-            <div class="row w-100 h-100 d-flex align-items-center">
-                <div class="col-4">
-                    <div class="header__item">
-                        <a href="#" class="header-item header__sale">
-                            Распродажа
+            <div class="row w-100 h-100">
+                <div id="header-mobile-search-wrapper" class="h-100 d-flex align-items-center w-100 justify-content-between header-search-wrapper">
+                    <div class="header__item mx-2">
+                        <a href="#" class="header-item header-phone">
+                                <span class="header__icon">
+                                    <img src="img/icons/phone.png">
+                                </span>
                         </a>
                     </div>
-                </div>
-                <div class="col-4 header-search-wrapper">
-                    <div class="header__item header__search d-flex justify-content-center mx-2 ">
+                    <div class="header__item mx-2">
+                        <a href="#" class="header-item header-map">
+                                <span class="header__icon">
+                                    <img src="img/icons/region.png">
+                                </span>
+                        </a>
+                    </div>
+
+                    <div class="header__item header__search mx-2">
                         <div class="header-item header-search">
-                            <button data-focus="header-md-search-input" class="header-search__icon header__icon header-search-opener">
+                            <button
+                                    data-focus="header-mobile-search-input"
+                                    data-wrapper="header-mobile-search-wrapper"
+                                    class="header-search__icon header__icon header-search-opener">
                                 <div class="header-search-icon">
                                     <img src="img/icons/search.png" alt="">
                                 </div>
                             </button>
-                            <input id="header-md-search-input" class="header-search__input header-search-input" type="text" placeholder="Искать товары">
+                            <input id="header-mobile-search-input" class="header-search__input header-search-input"
+                                   type="search" placeholder="Искать товары">
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
 
+                    <div class="header__item mx-2">
+                        <a href="#" class="header-item">
+                        <span class="header__icon">
+                            <img src="img/icons/favorites.svg">
+                        </span>
+
+                            <span class="header-item__title d-none d-lg-block">
+                            Избранное
+                        </span>
+                        </a>
+                    </div>
+
+                    <div class="header__item mx-2">
+                        <a href="#" class="header-item">
+                        <span class="header__icon">
+                            <img src="img/icons/basket.svg">
+                        </span>
+
+                            <span class="header-item__title d-none d-lg-block">
+                            Корзина
+                        </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!--    <div class="header">-->
-
-    <!--        <div class="header__left">-->
-    <!--            <div id="drop-down-menu-toggle" class="header__menu-open"></div>-->
-    <!--            <a class="header__icon header-phone button-contact" href="#">-->
-    <!--                <div class="header-icon">-->
-    <!--                    <img src="img/icons/phone.png" alt="">-->
-    <!--                </div>-->
-    <!--            </a>-->
-    <!--            <a class="header__icon header-map" href="#">-->
-    <!--                <div class="header-icon">-->
-    <!--                    <img src="img/icons/region.png" alt="">-->
-    <!--                </div>-->
-    <!--            </a>-->
-    <!--            <div class="header__search">-->
-    <!--                <div class="header-search">-->
-    <!--                    <input class="header-search__input" type="text" placeholder="Искать товары">-->
-    <!--                    <button class="header-search__icon">-->
-    <!--                        <div class="header-search-icon">-->
-    <!--                            <img src="img/icons/search.png" alt="">-->
-    <!--                        </div>-->
-    <!--                    </button>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="header__sale">-->
-    <!--                <a class="header-sale" href="#">Распродажа</a>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--        <div class="header__center">-->
-    <!--            <a href="/">-->
-    <!--                <img class="header__logo" src="img/cititex-logos/header_logo.png">-->
-    <!--            </a>-->
-    <!--        </div>-->
-    <!--        <div class="header__right">-->
-    <!--            <div class="header__connection">-->
-    <!--                <div class="header-connection">-->
-    <!--                    <span>8-9627-601-810</span>-->
-    <!--                    <span>8-8442-601-810</span>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <a class="header__item header-favorite" href="#">-->
-    <!--                <div class="header__icon">-->
-    <!--                    <div class="header-icon">-->
-    <!--                        <img src="img/icons/favorites.svg" alt="">-->
-    <!--                        <div class="header-icon__badge">10</div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="header__item-text">Избранное</div>-->
-    <!--            </a>-->
-    <!--            <a class="header__item header-card" href="#">-->
-    <!--                <div class="header__icon">-->
-    <!--                    <div class="header-icon">-->
-    <!--                        <img src="img/icons/basket.svg" alt="">-->
-    <!--                        <div class="header-icon__badge">10</div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="header__item-text">Корзина</div>-->
-    <!--            </a>-->
-    <!--            <a class="header__item button-login" href="#" data-modal="modal-login">-->
-    <!--                <div class="header__icon">-->
-    <!--                    <div class="header-icon">-->
-    <!--                        <img src="img/icons/private.svg" alt="">-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="header__item-text">Вход</div>-->
-    <!--            </a>-->
-    <!--        </div>-->
-    <!--    </div>-->
 
     <div id="drop-down-menu" class="drop-down-menu show pb-4">
         <div class="drop-down-menu__mobile-header">
@@ -262,4 +233,5 @@
 
         </div>
     </div>
+
 </header>
