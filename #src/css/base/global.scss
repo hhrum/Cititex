@@ -226,7 +226,8 @@ img {
 
 .breadcrumbs {
   z-index: 1;
-  padding: 10px $p_section 0;
+  // padding: 10px $p_section 0;
+  padding-top: 10px;
   margin-bottom: 50px;
 
   @include fontMontserrat(400, .7rem);
