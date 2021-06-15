@@ -15,68 +15,72 @@
     @@include('templates/header.html')
 
     <main class="review-page">
-        <div class="breadcrumbs"><a href="/">Главная</a> - Отзыв о товаре</div>
 
         <section class="review">
-            <div class="section-title">Отзыв о товаре</div>
-            <a href="/" class="review-page__go-back">&#8592; Назад</a>
+            <div class="container">
+                <div class="breadcrumbs"><a href="/">Главная</a> - Отзыв о товаре</div>
+                <div class="section-title">Отзыв о товаре</div>
+                <a href="/" class="review-page__go-back">&#8592; Назад</a>
 
-            <div class="review__content">
+                <div class="review__content">
 
-                <div class="review__images">
-                    <div class="review__img">
-                        <img src="img/review/review_1.png" alt="">
+                    <div class="review__images">
+                        <div class="review__img">
+                            <img src="img/review/review_1.png" alt="">
+                        </div>
+                        <div class="review__img">
+                            <img src="img/review/review_2.png" alt="">
+                        </div>
+                        <div class="review__img">
+                            <img src="img/review/review_2.png" alt="">
+                        </div>
                     </div>
-                    <div class="review__img">
-                        <img src="img/review/review_2.png" alt="">
+
+                    <div class="review__text">
+                        Халат был куплен год назад, за год он выглядит, как новый. Отлично впитывает
+                        влагу, удобный, размеры соответвуют нашим российским, не маломерит.
+                        На свой 46 брала 48, оказался большеват, пришлось обменять на меньший размер.
+                        Никаких вопросов с обменом не возникло. Сотрудники магазина пошли на встречу
+                        и прислали своего курьера для обмена. Спаибо большое за сервис и качество.
                     </div>
-                    <div class="review__img">
-                        <img src="img/review/review_2.png" alt="">
-                    </div>
+
                 </div>
 
-                <div class="review__text">
-                    Халат был куплен год назад, за год он выглядит, как новый. Отлично впитывает
-                    влагу, удобный, размеры соответвуют нашим российским, не маломерит.
-                    На свой 46 брала 48, оказался большеват, пришлось обменять на меньший размер.
-                    Никаких вопросов с обменом не возникло. Сотрудники магазина пошли на встречу
-                    и прислали своего курьера для обмена. Спаибо большое за сервис и качество.
+                <div class="center-button">
+                    <div class="section-button">Написать отзыв</div>
                 </div>
-
-            </div>
-
-            <div class="center-button">
-                <div class="section-button">Написать отзыв</div>
             </div>
         </section>
 
         <section class="viewed">
-            <div class="section-title viewed__title">
-                Вы смотрели
-            </div>
-
-            <div class="swiper-container product-swiper product-swiper--big">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 1})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 2})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 3})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 4})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 5})
-                    </div>
+            <div class="container">
+                <div class="section-title viewed__title">
+                    Вы смотрели
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+
+                <div class="swiper-container product-swiper product-swiper--big">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 1})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 2})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 3})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 4})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 5})
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section>
     </main>

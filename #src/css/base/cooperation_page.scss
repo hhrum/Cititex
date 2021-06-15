@@ -31,9 +31,6 @@
 
 .informations-tabs {
   margin-top: $m_section_top;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   &__item {
     display: flex;
@@ -112,10 +109,12 @@
   margin-top: $m_section_top;
 
   &__logos {
-    padding-top: 70px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin: 60px 40px 0 0;
   }
 }

@@ -22,10 +22,10 @@
   &__nav {
     margin: $m_section_top * 0.5 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &-item {
-      margin-right: 100px;
-
       font-weight: 300;
       cursor: pointer;
 
