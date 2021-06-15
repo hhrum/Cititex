@@ -109,6 +109,8 @@ function initSliders() {
     direction: 'horizontal',
     speed: 1000,
     spaceBetween: 32,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
 
     pagination: {
       el: '.swiper-pagination',
@@ -117,25 +119,19 @@ function initSliders() {
     },
 
     breakpoints: {
-      // width >= 320px
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-      },
-      500: {
+      540: {
         slidesPerView: 2,
         slidesPerGroup: 2,
       },
-      // width is >= 640px
-      800: {
+      720: {
         slidesPerView: 3,
         slidesPerGroup: 3,
       },
-      1100: {
+      960: {
         slidesPerView: 4,
         slidesPerGroup: 4,
       },
-      1500: {
+      1200: {
         slidesPerView: 5,
         slidesPerGroup: 5,
       }

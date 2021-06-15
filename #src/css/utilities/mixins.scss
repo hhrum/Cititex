@@ -37,7 +37,8 @@
 }
 
 @mixin calculateSizeForSquare($p, $m, $container, $count) {
-  --product-size: calc((#{$container} - #{$p} * 2 - #{$m} * #{$count - 1}) / #{$count});
+  //--product-size: calc((#{$container} - #{$p} * 2 - #{$m} * #{$count - 1}) / #{$count});
+  --product-size: calc(100% / #{$count});
 }
 
 @mixin calculateSizeForSquareContainer($p, $m, $container, $count, $t_count: $count) {
