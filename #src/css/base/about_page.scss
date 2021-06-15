@@ -2,7 +2,7 @@
 
 // Стили страницы о нас
 
-.about-us {
+.about-page {
    margin-top: $m_header_top;
    @include fontMontserrat(400, 1.3rem, 1.5rem);
 
@@ -120,6 +120,7 @@
    }
 
    &__img {
+      margin-left: 50px;
       img {
          @include imageFit;
       }
@@ -153,7 +154,7 @@
          padding: 0 15px;
 
          cursor: pointer;
-         @include fontMontserrat(700, 1.9rem);
+         @include fontMontserrat(700, 1.5rem);
 
          background-color: $c_white;
          transition: $transition_time;
@@ -174,8 +175,5 @@
 }
 
 .links {
-  display: flex;
-  justify-content: space-between;
   margin-top: $m_section_top;
-  padding: 0 300px;
 }
