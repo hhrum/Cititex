@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cititex</title>
 
@@ -15,128 +15,128 @@
 
 <body>
 
-    @@include('templates/header.html')
+@@include('templates/header.html')
 
-    <main class="main">
+<main class="main">
 
-        <section class="main-slider no-padding">
-            <div class="swiper-container main-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="main-slider-item">
-                            <div class="main-slider-item__bg">
-                                <img src="img/main-slider/main_slider.png">
-                            </div>
-
-                            <div class="main-slider-item__content">
-                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
-                                <p class="main-slider-item__subtitle">
-                                    Первая доставка покупок
-                                    <br>
-                                    в подарок до 1 марта
-                                </p>
-                                <a href="#" class="section-button no-border">Купить &#8594;</a>
-                            </div>
+    <section class="main-slider no-padding">
+        <div class="swiper-container main-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="main-slider-item">
+                        <div class="main-slider-item__bg">
+                            <img src="img/main-slider/main_slider.png">
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="main-slider-item">
-                            <div class="main-slider-item__bg">
-                                <img src="img/main-slider/main_slider.png">
-                            </div>
 
-                            <div class="main-slider-item__content">
-                                <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
-                                <p class="main-slider-item__subtitle">
-                                    Первая доставка покупок
-                                    <br>
-                                    в подарок до 1 марта
-                                </p>
-                                <a href="#" class=" section-button no-border">Купить &#8594;</a>
-                            </div>
+                        <div class="main-slider-item__content">
+                            <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                            <p class="main-slider-item__subtitle">
+                                Первая доставка покупок
+                                <br>
+                                в подарок до 1 марта
+                            </p>
+                            <a href="#" class="section-button no-border">Купить &#8594;</a>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
+                <div class="swiper-slide">
+                    <div class="main-slider-item">
+                        <div class="main-slider-item__bg">
+                            <img src="img/main-slider/main_slider.png">
+                        </div>
 
-        <section class="new-items">
-            <div class="section-title new-items__title">
-                Новинки от Cititex
-            </div>
-
-            <div class="new-items__categories">
-                <div class="new-items__category">Подушки</div>
-                <div class="new-items__category">Постельное белье</div>
-                <div class="new-items__category">Полотенца</div>
-                <div class="new-items__category is-active">Для кухни</div>
-                <div class="new-items__category">Халаты</div>
-                <div class="new-items__category">Праздники</div>
-            </div>
-
-            <div class="swiper-container product-swiper product-swiper--big">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 1})
+                        <div class="main-slider-item__content">
+                            <h1 class="main-slider-item__title">Гладкое хлопковое полотно</h1>
+                            <p class="main-slider-item__subtitle">
+                                Первая доставка покупок
+                                <br>
+                                в подарок до 1 марта
+                            </p>
+                            <a href="#" class=" section-button no-border">Купить &#8594;</a>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 2})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 3})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 4})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 5})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 6})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 7})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 8})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 9})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 10})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 11})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 12})
-                    </div>
-                    ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-
-            <a href="#" class="section-button">
-                Показать всё
-            </a>
-
-        </section>
-
-        <section class="sale no-padding">
-            <div data-aos="fade-right">
-                <div id="sale-image" class="sale__image">
-                    <img src="img/sale/sale_image.png">
                 </div>
             </div>
-            <div id="sale-content" class="sale__content">
-                <div class="sale__bg-color"></div>
-                <div class="section-title sale__title">Распродажа</div>
-                <!--            <div data-aos="fade-left">-->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="new-items">
+        <div class="section-title new-items__title">
+            Новинки от Cititex
+        </div>
+
+        <div class="new-items__categories">
+            <div class="new-items__category">Подушки</div>
+            <div class="new-items__category">Постельное белье</div>
+            <div class="new-items__category">Полотенца</div>
+            <div class="new-items__category is-active">Для кухни</div>
+            <div class="new-items__category">Халаты</div>
+            <div class="new-items__category">Праздники</div>
+        </div>
+
+        <div class="swiper-container product-swiper product-swiper--big">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 1})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 2})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 3})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 4})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 5})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 6})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 7})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 8})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 9})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 10})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 11})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 12})
+                </div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <a href="#" class="section-button">
+            Показать всё
+        </a>
+
+    </section>
+
+    <section class="sale no-padding">
+        <div data-aos="fade-right">
+            <div id="sale-image" class="sale__image">
+                <img src="img/sale/sale_image.png">
+            </div>
+        </div>
+        <div id="sale-content" class="sale__content">
+            <div class="sale__bg-color"></div>
+            <div class="section-title sale__title">Распродажа</div>
+            <div data-aos="fade-left">
                 <div class="swiper-container sale__slider product-swiper product-swiper--slim">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -163,160 +163,152 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
+            </div>
                 <div class="sale__button-wrapper">
                     <a href="#" class="section-button section-button--black">
                         Показать всё
                     </a>
                 </div>
-                <!--            </div>-->
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="about">
-            <div class="about__title section-title">19 лет создаём уют!</div>
-            <div class="about__subtitle section-subtitle">
-                Cititex - один из лидеров, среди интернет магазинов, по продаже текстильных изделий и №1 по ЮФО,
-                осуществляющий продажу и доставку текстильных товаров для дома.
+    <section class="about">
+        <div class="about__title section-title">19 лет создаём уют!</div>
+        <div class="about__subtitle section-subtitle">
+            Cititex - один из лидеров, среди интернет магазинов, по продаже текстильных изделий и №1 по ЮФО,
+            осуществляющий продажу и доставку текстильных товаров для дома.
+        </div>
+        <div class="about__content">
+            <div data-aos="fade-right">
+                <div class="about__info">
+                    <div class="about__title section-title">Сититекс это:</div>
+                    <div class="about__advantages">
+                        <div class="about__advantage">
+                            <div class="about__advantage-image">
+                                <img src="img/advantages/advantages_1.png" alt="">
+                            </div>
+                            <div class="about__advantage-text">
+                                Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
+                                доставят
+                                Ваш
+                                заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
+                                уголки
+                                мы
+                                отправляем Ваши заказы Почтой России.
+                            </div>
+                        </div>
+                        <div class="about__advantage">
+                            <div class="about__advantage-image">
+                                <img src="img/advantages/advantages_1.png" alt="">
+                            </div>
+                            <div class="about__advantage-text">
+                                Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
+                                доставят
+                                Ваш
+                                заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
+                                уголки
+                                мы
+                                отправляем Ваши заказы Почтой России.
+                            </div>
+                        </div>
+                        <div class="about__advantage">
+                            <div class="about__advantage-image">
+                                <img src="img/advantages/advantages_1.png" alt="">
+                            </div>
+                            <div class="about__advantage-text">
+                                Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
+                                доставят
+                                Ваш
+                                заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
+                                уголки
+                                мы
+                                отправляем Ваши заказы Почтой России.
+                            </div>
+                        </div>
+                        <div class="about__advantage">
+                            <div class="about__advantage-image">
+                                <img src="img/advantages/advantages_1.png" alt="">
+                            </div>
+                            <div class="about__advantage-text">
+                                Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
+                                доставят
+                                Ваш
+                                заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
+                                уголки
+                                мы
+                                отправляем Ваши заказы Почтой России.
+                            </div>
+                        </div>
+                        <div class="about__advantage">
+                            <div class="about__advantage-image">
+                                <img src="img/advantages/advantages_1.png" alt="">
+                            </div>
+                            <div class="about__advantage-text">
+                                Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
+                                доставят
+                                Ваш
+                                заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
+                                уголки
+                                мы
+                                отправляем Ваши заказы Почтой России.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sale__button-wrapper">
+                        <a href="/about.html" class="section-button">Подробнее</a>
+                    </div>
+                </div>
             </div>
-            <div class="about__content">
+
+            <div data-aos="fade-left">
+                <div class="about__images">
+                    <img src="img/main-about/about_image_1.png" class="about__first-image">
+                    <img src="img/main-about/about_image_2.png" class="about__second-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog-categories">
+        <div class="section-title">Каталог</div>
+        <div class="catalog-categories__grid">
+            <div class="catalog-categories__item">
                 <div data-aos="fade-right">
-                    <div class="about__info">
-                        <div class="about__title section-title">Сититекс это:</div>
-                        <div class="about__advantages">
-                            <div class="about__advantage">
-                                <div class="about__advantage-image">
-                                    <img src="img/advantages/advantages_1.png" alt="">
-                                </div>
-                                <div class="about__advantage-text">
-                                    Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
-                                    доставят
-                                    Ваш
-                                    заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
-                                    уголки
-                                    мы
-                                    отправляем Ваши заказы Почтой России.
-                                </div>
-                            </div>
-                            <div class="about__advantage">
-                                <div class="about__advantage-image">
-                                    <img src="img/advantages/advantages_1.png" alt="">
-                                </div>
-                                <div class="about__advantage-text">
-                                    Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
-                                    доставят
-                                    Ваш
-                                    заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
-                                    уголки
-                                    мы
-                                    отправляем Ваши заказы Почтой России.
-                                </div>
-                            </div>
-                            <div class="about__advantage">
-                                <div class="about__advantage-image">
-                                    <img src="img/advantages/advantages_1.png" alt="">
-                                </div>
-                                <div class="about__advantage-text">
-                                    Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
-                                    доставят
-                                    Ваш
-                                    заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
-                                    уголки
-                                    мы
-                                    отправляем Ваши заказы Почтой России.
-                                </div>
-                            </div>
-                            <div class="about__advantage">
-                                <div class="about__advantage-image">
-                                    <img src="img/advantages/advantages_1.png" alt="">
-                                </div>
-                                <div class="about__advantage-text">
-                                    Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
-                                    доставят
-                                    Ваш
-                                    заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
-                                    уголки
-                                    мы
-                                    отправляем Ваши заказы Почтой России.
-                                </div>
-                            </div>
-                            <div class="about__advantage">
-                                <div class="about__advantage-image">
-                                    <img src="img/advantages/advantages_1.png" alt="">
-                                </div>
-                                <div class="about__advantage-text">
-                                    Быстрая доставка по всей России. Партнерские службы доставки с широкой географией
-                                    доставят
-                                    Ваш
-                                    заказ в минимальные сроки в любой город нашей необъятной страны. А в самые удаленные
-                                    уголки
-                                    мы
-                                    отправляем Ваши заказы Почтой России.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sale__button-wrapper">
-                            <a href="/about.html" class="section-button">Подробнее</a>
-                        </div>
-                    </div>
+                    @@include("templates/catalog_category.html")
                 </div>
+            </div>
+            <div class="catalog-categories__item">
+                <div data-aos="fade-right">
+                    @@include("templates/catalog_category.html")
+                </div>
+            </div>
 
+            <div class="catalog-categories__item">
                 <div data-aos="fade-left">
-                    <div class="about__images">
-                        <img src="img/main-about/about_image_1.png" class="about__first-image">
-                        <img src="img/main-about/about_image_2.png" class="about__second-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="catalog-categories">
-            <div class="section-title">Каталог</div>
-            <div class="catalog-categories__grid">
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
-                    @@include("templates/catalog_category.html")
-                </div>
-                <div class="catalog-categories__item">
                     @@include("templates/catalog_category.html")
                 </div>
             </div>
-        </section>
-
-        <section class="connect-section all-padding">
-            <div class="connect-section__content">
-                <div class="connect-section__title">
-                    Наш инстаграм
+            <div class="catalog-categories__item">
+                <div data-aos="fade-left">
+                    @@include("templates/catalog_category.html")
                 </div>
-
-                <div class="connect-section__mobile-images">
-                    <div class="connect-section__image">
-                        <img src="img/instagram/instagram_1.png">
-                    </div>
-                    <div class="connect-section__image">
-                        <img src="img/instagram/instagram_1.png">
-                    </div>
-                    <div class="connect-section__image">
-                        <img src="img/instagram/instagram_1.png">
-                    </div>
-                </div>
-
-                <div class="connect-section__subtitle">
-                    Подпишись, чтобы быть <br> в курсе
-                </div>
-                <a href="#" class="section-button">
-                    Подписаться
-                </a>
             </div>
-            <div class="connect-section__images">
+            <div class="catalog-categories__item">
+                <div data-aos="fade-left">
+                    @@include("templates/catalog_category.html")
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="connect-section all-padding">
+        <div class="connect-section__content">
+            <div class="connect-section__title">
+                Наш инстаграм
+            </div>
+
+            <div class="connect-section__mobile-images">
                 <div class="connect-section__image">
                     <img src="img/instagram/instagram_1.png">
                 </div>
@@ -327,71 +319,90 @@
                     <img src="img/instagram/instagram_1.png">
                 </div>
             </div>
-        </section>
 
-        <section class="popular">
-
-            <div class="section-title new-items__title">
-                Популярное от Cititex
+            <div class="connect-section__subtitle">
+                Подпишись, чтобы быть <br> в курсе
             </div>
-
-            <div class="swiper-container product-swiper product-swiper--big">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 1})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 2})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 3})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 4})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 5})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 6})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 7})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 8})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 9})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 10})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 11})
-                    </div>
-                    <div class="swiper-slide">
-                        @@include("templates/product.html", {"name": 12})
-                    </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-
             <a href="#" class="section-button">
-                Показать всё
+                Подписаться
             </a>
+        </div>
+        <div class="connect-section__images">
+            <div class="connect-section__image">
+                <img src="img/instagram/instagram_1.png">
+            </div>
+            <div class="connect-section__image">
+                <img src="img/instagram/instagram_1.png">
+            </div>
+            <div class="connect-section__image">
+                <img src="img/instagram/instagram_1.png">
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <section class="popular">
 
-    </main>
+        <div class="section-title new-items__title">
+            Популярное от Cititex
+        </div>
 
-    @@include('templates/footer.html')
-    @@include('templates/modals.html')
+        <div class="swiper-container product-swiper product-swiper--big">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 1})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 2})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 3})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 4})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 5})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 6})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 7})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 8})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 9})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 10})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 11})
+                </div>
+                <div class="swiper-slide">
+                    @@include("templates/product.html", {"name": 12})
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
 
-    @@include('templates/scripts.html')
+        <a href="#" class="section-button">
+            Показать всё
+        </a>
+
+    </section>
+
+</main>
+
+@@include('templates/footer.html')
+@@include('templates/modals.html')
+
+@@include('templates/scripts.html')
 </body>
 
 </html>

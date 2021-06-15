@@ -4,10 +4,15 @@
 
 .product {
   //width: 320px;
+
+  width: var(--product-size);
   display: flex;
   flex-direction: column;
 
   &__header {
+    width: var(--product-size);
+    height: var(--product-size);
+    
     position: relative;
     // TODO: сори, за эту хуйню
     @include calculateSizeForSquare(var(--p-section), 32px, 100vw, 5);

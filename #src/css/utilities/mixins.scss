@@ -38,11 +38,9 @@
 
 @mixin calculateSizeForSquare($p, $m, $container, $count) {
   --product-size: calc((#{$container} - #{$p} * 2 - #{$m} * #{$count - 1}) / #{$count});
-  width: var(--product-size);
-  height: var(--product-size);
 }
 
 @mixin calculateSizeForSquareContainer($p, $m, $container, $count, $t_count: $count) {
-  --product-size: calc((#{$container} - #{$p} * 2 - #{$m} * #{$t_count - 1}) / #{$t_count});
-  width: calc(var(--product-size) * #{$count} + #{$m} * #{$count - 1} + #{$p} * 2);
+  --product-size-help: calc((#{$container} - #{$p} * 2 - #{$m} * #{$t_count - 1}) / #{$t_count});
+  --container-size: calc(var(--product-size-help) * #{$count} + #{$m} * #{$count - 1} + #{$p} * 2);
 }

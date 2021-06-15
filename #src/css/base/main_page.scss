@@ -125,6 +125,7 @@
 
   &__content {
     @include calculateSizeForSquareContainer(var(--p-section), 32px, 100vw, 3, 5);
+    width: var(--container-size);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -145,6 +146,11 @@
 
     @media screen and (max-width: 500px) {
       @include calculateSizeForSquareContainer(var(--p-section), 32px, 100vw, 1, 1);
+    }
+
+    .swiper-container {
+      width: calc(var(--container-size) - var(--p-section) * 2);
+
     }
   }
 
@@ -263,6 +269,11 @@
 
   &__item {
     margin: 12px;
+
+    > * {
+      width: 100%;
+      height: 100%;
+    }
 
     .catalog-category {
       width: 100%; height: 100%;

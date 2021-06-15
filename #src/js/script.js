@@ -86,7 +86,7 @@ window.addEventListener('scroll', function (e) {
 document.addEventListener('DOMContentLoaded', function () {
 
   AOS.init({
-    offset: -500,
+    // offset: -500,
     duration: 1000
   });
   initSliders();
@@ -146,8 +146,6 @@ function initSliders() {
     direction: 'horizontal',
     speed: 1000,
     spaceBetween: 32,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
 
     pagination: {
       el: '.swiper-pagination',
