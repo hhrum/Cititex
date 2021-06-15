@@ -2,138 +2,143 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cititex</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cititex</title>
 
-  @@include('templates/styles.html')
+    @@include('templates/styles.html')
 </head>
 
 <body>
-  @@include('templates/header.html')
+    @@include('templates/header.html')
 
-  <main class="postlist-page reviews">
-    <div class="breadcrumbs"><a href="/">Главная</a> - Отзывы</div>
+    <main class="postlist-page reviews">
+        <section class="postlist">
+            <div class="container">
+                <div class="breadcrumbs"><a href="/">Главная</a> - Отзывы</div>
+                <div class="section-title">Отзывы о Cititex</div>
+                <a href="#" class="reviews__give-review">&#8592; Оставить отзыв</a>
 
+                <div class="postlist__content">
 
-    <section class="postlist">
-      <div class="section-title">Отзывы о Cititex</div>
-      <a href="#" class="reviews__give-review">&#8592; Оставить отзыв</a>
+                    <div class="postlist__item post">
 
-      <div class="postlist__content">
+                        <div class="post__img">
+                            <img src="img/postlist/post_1.png" alt="">
+                        </div>
+                        <div class="post__content">
+                            <div class="post__title">
+                                Лучшее постельное бельё в городе
+                            </div>
+                            <div class="post__text">
+                                Красивое, лёгкое, практичное покрывало из современного материала обязательно порадует
+                                Вас и
+                                Ваших близких!
+                            </div>
+                            <button class="section-button section-button--black">Читать &#8594;</button>
+                        </div>
+                        <div class="post__date">22.02.2020</div>
 
-        <div class="postlist__item post">
+                    </div>
+                    <div class="postlist__item post">
 
-          <div class="post__img">
-            <img src="img/postlist/post_1.png" alt="">
-          </div>
-          <div class="post__content">
-            <div class="post__title">
-              Лучшее постельное бельё в городе
+                        <div class="post__img">
+                            <img src="img/postlist/post_1.png" alt="">
+                        </div>
+                        <div class="post__content">
+                            <div class="post__title">
+                                Большой ассортимент
+                            </div>
+                            <div class="post__text">
+                                Красивое, лёгкое, практичное покрывало из современного материала обязательно порадует
+                                Вас и
+                                Ваших близких!
+                            </div>
+                            <button class="section-button section-button--black">Читать &#8594;</button>
+                        </div>
+                        <div class="post__date">22.02.2020</div>
+
+                    </div>
+                    <div class="postlist__item post">
+
+                        <div class="post__img">
+                            <img src="img/postlist/post_1.png" alt="">
+                        </div>
+                        <div class="post__content">
+                            <div class="post__title">
+                                Вежливое и отзывчивое отношение к клиентам
+                            </div>
+                            <div class="post__text">
+                                Красивое, лёгкое, практичное покрывало из современного материала обязательно порадует
+                                Вас и
+                                Ваших близких!
+                            </div>
+                            <button class="section-button section-button--black">Читать &#8594;</button>
+                        </div>
+                        <div class="post__date">22.02.2020</div>
+
+                    </div>
+
+                </div>
+
+                <div class="postlist__pagination postlist-pagination">
+                    <div class="postlist-pagination__items">
+                        <a href="#" class="postlist-pagination__page">В начало</a>
+                        <a href="#" class="postlist-pagination__page">1</a>
+                        <a href="#" class="postlist-pagination__page">2</a>
+                        <a href="#" class="postlist-pagination__page">3</a>
+                        <a href="#" class="postlist-pagination__page">4</a>
+                        <a href="#" class="postlist-pagination__page">5</a>
+                        <a href="#" class="postlist-pagination__page">6</a>
+                        <a href="#" class="postlist-pagination__page">7</a>
+                        <a href="#" class="postlist-pagination__page">8</a>
+                        <a href="#" class="postlist-pagination__page">9</a>
+                        <a href="#" class="postlist-pagination__page">10</a>
+                        <a href="#" class="postlist-pagination__page">В конец</a>
+                    </div>
+                </div>
             </div>
-            <div class="post__text">
-              Красивое, лёгкое, практичное покрывало из современного материала обязательно порадует Вас и
-              Ваших близких!
+        </section>
+
+        <section class="viewed">
+            <div class="container">
+                <div class="section-title viewed__title">
+                    Вы смотрели
+                </div>
+
+                <div class="swiper-container product-swiper product-swiper--big">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 1})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 2})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 3})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 4})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 5})
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-            <button class="section-button section-button--black">Читать &#8594;</button>
-          </div>
-          <div class="post__date">22.02.2020</div>
+        </section>
+    </main>
 
-        </div>
-        <div class="postlist__item post">
+    @@include('templates/footer.html')
+    @@include('templates/modals.html')
 
-          <div class="post__img">
-            <img src="img/postlist/post_1.png" alt="">
-          </div>
-          <div class="post__content">
-            <div class="post__title">
-              Большой ассортимент
-            </div>
-            <div class="post__text">
-              Красивое, лёгкое, практичное покрывало из современного материала обязательно порадует Вас и
-              Ваших близких!
-            </div>
-            <button class="section-button section-button--black">Читать &#8594;</button>
-          </div>
-          <div class="post__date">22.02.2020</div>
-
-        </div>
-        <div class="postlist__item post">
-
-          <div class="post__img">
-            <img src="img/postlist/post_1.png" alt="">
-          </div>
-          <div class="post__content">
-            <div class="post__title">
-              Вежливое и отзывчивое отношение к клиентам
-            </div>
-            <div class="post__text">
-              Красивое, лёгкое, практичное покрывало из современного материала обязательно порадует Вас и
-              Ваших близких!
-            </div>
-            <button class="section-button section-button--black">Читать &#8594;</button>
-          </div>
-          <div class="post__date">22.02.2020</div>
-
-        </div>
-
-      </div>
-
-      <div class="postlist__pagination postlist-pagination">
-        <div class="postlist-pagination__items">
-          <a href="#" class="postlist-pagination__page">В начало</a>
-          <a href="#" class="postlist-pagination__page">1</a>
-          <a href="#" class="postlist-pagination__page">2</a>
-          <a href="#" class="postlist-pagination__page">3</a>
-          <a href="#" class="postlist-pagination__page">4</a>
-          <a href="#" class="postlist-pagination__page">5</a>
-          <a href="#" class="postlist-pagination__page">6</a>
-          <a href="#" class="postlist-pagination__page">7</a>
-          <a href="#" class="postlist-pagination__page">8</a>
-          <a href="#" class="postlist-pagination__page">9</a>
-          <a href="#" class="postlist-pagination__page">10</a>
-          <a href="#" class="postlist-pagination__page">В конец</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="viewed">
-      <div class="section-title viewed__title">
-        Вы смотрели
-      </div>
-
-      <div class="swiper-container product-swiper product-swiper--big">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 1})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 2})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 3})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 4})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 5})
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-  </main>
-
-  @@include('templates/footer.html')
-  @@include('templates/modals.html')
-
-  @@include('templates/scripts.html')
+    @@include('templates/scripts.html')
 </body>
 
 </html>

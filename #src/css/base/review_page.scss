@@ -42,9 +42,9 @@
 
   &__text {
     flex: 1 1;
-    padding: 40px 80px;
+    padding: 40px;
 
-    @include fontMontserrat(400, 1.2rem);
+    @include fontMontserrat(400, 1.2rem, 1.4rem);
     
     border: 1px solid $c_black;
   }

@@ -226,7 +226,6 @@ img {
 
 .breadcrumbs {
   z-index: 1;
-  // padding: 10px $p_section 0;
   padding-top: 10px;
   margin-bottom: 50px;
 
@@ -259,7 +258,7 @@ img {
 
   .breadcrumbs {
     position: absolute;
-    top: 40px; left: 0;
+    top: 40px; left: auto;
 
     font-weight: 300;
   }

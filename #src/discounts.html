@@ -2,90 +2,99 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cititex</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cititex</title>
 
-  @@include('templates/styles.html')
+    @@include('templates/styles.html')
 </head>
 
 <body>
-  @@include('templates/header.html')
+    @@include('templates/header.html')
 
-  <main class="discounts-page">
-    <div class="breadcrumbs"><a href="/">Главная</a> - Дополнительные скидки</div>
+    <main class="discounts-page">
+        <div class="breadcrumbs container"><a href="/">Главная</a> - Дополнительные скидки</div>
 
-    <section class="banner">
+        <section class="banner">
+            <div class="container">
+                <div class="banner__bg">
+                    <img src="img/product_bg_2.png" alt="">
+                </div>
+                <div class="banner__title">Яркие краски лета с полотенцами Cleanelly!</div>
+                <div class="banner__subtitle">
+                    При покупке от 5000 руб. мы предоставляем <br>
+                    индивидуальные условия сотрудничества!
+                </div>
+                <div class="d-flex align-items-baseline">
+                    <a class="section-button no-border" href="#">Купить &#8594;</a>
+                </div>
+            </div>
+        </section>
 
-      <div class="banner__bg">
-        <img src="img/product_bg_2.png" alt="">
-      </div>
-      <div class="banner__title">Яркие краски лета с полотенцами Cleanelly!</div>
-      <div class="banner__subtitle">
-        При покупке от 5000 руб. мы предоставляем <br>
-        индивидуальные условия сотрудничества!
-      </div>
-      <a class="section-button no-border" href="#">Купить &#8594;</a>
-    </section>
+        <section class="discounts">
+            <div class="container">
+                <div class="section-title">Дополнительные скидки</div>
 
-    <section class="discounts">
-      <div class="section-title">Дополнительные скидки</div>
+                <div class="discounts__text">
+                    Для получения дополнительных скидок, индивидуальных условий сотрудничества и статуса оптового
+                    покпателя,
+                    достаточно совершить покупку
+                    от 5000 руб. и иметь ИП, или быть зарегестрированным, как самозанятый. Отличный вариант для
+                    совместных
+                    покупок!
+                </div>
 
-      <div class="discounts__text">
-        Для получения дополнительных скидок, индивидуальных условий сотрудничества и статуса оптового покпателя,
-        достаточно совершить покупку
-        от 5000 руб. и иметь ИП, или быть зарегестрированным, как самозанятый. Отличный вариант для совместных
-        покупок!
-      </div>
+                <div class="discounts__text">
+                    Если вы являетесь представителем крупной компании, то мы вам предложим выгодные условия поставок,
+                    для
+                    крупного опта.
+                </div>
 
-      <div class="discounts__text">
-        Если вы являетесь представителем крупной компании, то мы вам предложим выгодные условия поставок, для
-        крупного опта.
-      </div>
+                <div class="center-button">
+                    <div class="section-button section-button--black">К покупкам &#8594;</div>
+                </div>
+            </div>
+        </section>
 
-      <div class="center-button">
-        <div class="section-button section-button--black">К покупкам &#8594;</div>
-      </div>
+        <section class="viewed">
+            <div class="container">
+                <div class="section-title viewed__title">
+                    Вы смотрели
+                </div>
 
-    </section>
+                <div class="swiper-container product-swiper product-swiper--big">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 1})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 2})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 3})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 4})
+                        </div>
+                        <div class="swiper-slide">
+                            @@include("templates/product.html", {"name": 5})
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section class="viewed">
-      <div class="section-title viewed__title">
-        Вы смотрели
-      </div>
+    @@include('templates/footer.html')
+    @@include('templates/modals.html')
 
-      <div class="swiper-container product-swiper product-swiper--big">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 1})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 2})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 3})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 4})
-          </div>
-          <div class="swiper-slide">
-            @@include("templates/product.html", {"name": 5})
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-  </main>
-
-  @@include('templates/footer.html')
-  @@include('templates/modals.html')
-
-  @@include('templates/scripts.html')
+    @@include('templates/scripts.html')
 </body>
 
 </html>
